@@ -1,0 +1,23 @@
+package test.servlet;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+@WebServlet("/fortune") //  톰캣서버는 fortune 이라는 요청이 오면 클래스의 service 메소드를 실행한다
+public class FortuneServlet extends HttpServlet { //1. httpServlet  클래스 상속받기 // 표준 맞추기
+	@Override
+	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		
+		//요청을 한 클라이언트에게 문자열을 출력할 수 있는 객체의 참조값 얻어내기
+		PrintWriter pw = resp.getWriter();
+		pw.println("lucky day!");
+		pw.flush();
+		pw.close();
+	
+}

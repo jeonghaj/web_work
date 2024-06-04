@@ -1,0 +1,10 @@
+package test.servlet;
+
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+
+@WebServlet("/fortune")
+public class FortuneServlet extends HttpServlet { //1. httpServlet  클래스 상속받기
+	
+	
+}

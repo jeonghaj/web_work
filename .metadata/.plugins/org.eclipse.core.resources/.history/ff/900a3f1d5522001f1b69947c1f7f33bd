@@ -1,0 +1,56 @@
+package test.servletpac;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.List;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import test.dto.MemberDto;
+@WebServlet("/send")
+public class LoginServlet extends HttpServlet {
+	@Override
+	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		String email = req.getParameter("email");
+		String password = req.getParameter("password");
+				
+		List<MemberDto> members = new ArrayList<>();
+		members.add(new MemberDto(1,"jjha0125@nate.com","4826ab"));
+		members.add(new MemberDto(2,"jjha0125@naver.com","6523ab"));
+		members.add(new MemberDto(3,"jjha0125@gmail.com","1352ab"));
+		
+		//응답 인코딩 설정
+		resp.setCharacterEncoding("utf-8");
+		//응답 컨텐트 설정
+		resp.setContentType("text/html; charset=utf-8");
+		//요청을 한 클라이언트에게 문자열을 출력할수 있는 객체의 참조값 얻어내기
+		PrintWriter pw = resp.getWriter();
+		pw.println("<!doctype html>");
+		pw.println("<html>");
+		pw.println("<head>");
+		pw.println("<meta charset='utf-8'>");
+		pw.println("<title></title>");
+		pw.println("</head>");
+		pw.println("<body>");
+		for (MemberDto tmp:members) {
+			if(email==tmp.getName()) {
+				pw.println("이메일이 일치합니다");
+				if(password==tmp.getAddr()) {
+					pw.println("로그인 되었습니다");
+				}else {
+					pw.println("비밀번호가 틀렸습니다");
+				}
+			}
+		}
+		
+		
+		pw.println("</body>");
+		pw.println("</html>");
+		pw.close();
+		
+	}
+}

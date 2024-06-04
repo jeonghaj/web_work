@@ -1,0 +1,5 @@
+package test.servlet;
+
+public class FortuneServlet {
+
+}
