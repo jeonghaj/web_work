@@ -11,14 +11,32 @@
 	<!-- http://localhost:8888/Step01_Servlet/friend/list -->
 		<li><a href="friend/list">친구 목록보기</a></li>
 		<li><a href="todo/list">할일 목록보기</a></li>
-		<li><a href="member/list">할일 목록보기</a></li>
+		<li><a href="member/list">멤버 목록보기</a></li>
+		<li><a href="friend/list.jsp">친구 목록보기(jsp) </a></li>
+		<li><a href="todo/list.jsp">할일 목록보기(jsp) </a></li>
+		<li><a href="member/list.jsp">멤버 목록보기(jsp)</a></li>
+		
 	</ul>
 	<!-- http://localhost:8888/Step01_Servlet/send?msg= -->
 	<form action="send" method="get">
 		<input type="text" name="msg" placeholder="할말 입력..." />
 		<button type="submit">전송</button>
 	</form>
-	
+	<br>
+	<form action="/Step01_Servlet/send2" method="post">
+		<input type="text" name="msg" placeholder="할말 입력..."/>
+		<button type="submit">전송2</button>
+	</form>
+		<br>
+	<form action="/Step01_Servlet/send.jsp" method="post">
+		<input type="text" name="msg" placeholder="할말 입력..."/>
+		<button type="submit">전송3</button>
+	</form>
+	<p>링크를 눌러도 GET 방식 전송 파라미터를 전달할 수 있다</p>
+	<p>아래의 링크를 눌러보세요</p>
+	<ul>
+		<li><a href="send?msg=hello">hello</a></li>
+	</ul>
 	</div>
 </body>
 </html>

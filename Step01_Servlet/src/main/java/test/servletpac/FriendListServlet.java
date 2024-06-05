@@ -47,12 +47,14 @@ public class FriendListServlet extends HttpServlet {//1.
 					String tmp = names.get(i);
 					//li 요소 가운데 끼워서 출력하기
 					pw.println("<li>"+tmp+"</li>");
-				}		
+				}	
+			pw.println("</ul>");
+			pw.println("<ul>");
 			//확장 for문
 				for(String tmp : names) {
 					pw.println("<li>"+tmp+"</li>");
 				}
-			pw.println("</ul>");
+				pw.println("</ul>");
 		pw.println("</body>");
 		pw.println("</html>");
 		pw.close();
