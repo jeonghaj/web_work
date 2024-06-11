@@ -13,6 +13,9 @@
 		<ul>
 			<li><a href="${pageContext.request.contextPath }/test.jsp">Connection 객체 얻어오기 테스트</a></li>
 			<li><a href="${pageContext.request.contextPath }/member/list.jsp">회원목록 보기</a></li>
+			<li><a href="${pageContext.request.contextPath }/friend/list.jsp">친구목록 보기</a></li>
+			<li><a href="${pageContext.request.contextPath }/guest/list.jsp">방명록</a></li>
+			
 		</ul>
 	</div>
 </body>

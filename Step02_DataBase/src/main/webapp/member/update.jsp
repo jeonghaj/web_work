@@ -4,20 +4,15 @@
     pageEncoding="UTF-8"%>
     
     <%
+    	// 폼 전송되는 수정할 회원의 번호, 이름, 주소를 추출한다.
     	String name = request.getParameter("name");
     	String addr = request.getParameter("addr");
     	int num = Integer.parseInt(request.getParameter("num"));
-    
-    	MemberDao dao = new MemberDao();
-    	MemberDto dto = new MemberDto();
-    	dto.setName(name);
-    	dto.setAddr(addr);
-    	dto.setNum(num);
-    	dao.update(dto);
+    	// DB에 수정 반영한다.
+    	MemberDto dto = new MemberDto(num, name, addr);
+    	//new MemberDao().update(dto);
+    	boolean isSuccess = new MemberDao().update(dto);
     	
-    	String cPath=request.getContextPath();
-    	//특정 경로로 요청을 다시 하라는 리다이렉트 응답하기
-    	response.sendRedirect(cPath+"/member/list.jsp");
     %>
 <!DOCTYPE html>
 <html>
@@ -26,6 +21,15 @@
 <title>Insert title here</title>
 </head>
 <body>
+<script>
+	<%if(isSuccess){%>
+		alert("수정했습니다.")
+		location.href="${pageContext.request.contextPath }/member/list.jsp"
+	<%}else{%>
+		alert("수정 실패")
+		location.href="${pageContext.request.contextPath }/member/updateform.jsp?num=<%=num%>"
+	<%}%>
+</script>
 
 </body>
 </html>

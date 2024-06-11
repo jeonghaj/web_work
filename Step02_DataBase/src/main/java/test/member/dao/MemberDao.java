@@ -11,6 +11,41 @@ import test.util.DbcpBean;
 
 public class MemberDao {
 	
+	public MemberDto getData(int num) {
+		MemberDto dto=null;
+		
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		try {
+			//connection 객체의 참조값
+			conn=new DbcpBean().getConn();
+			String sql="select name, addr"
+					+ " from member"
+					+ " where num=?";
+			pstmt=conn.prepareStatement(sql);
+			pstmt.setInt(1, num);
+			
+			rs=pstmt.executeQuery();
+			if(rs.next()) {
+				dto = new MemberDto();
+				dto.setNum(num);
+				dto.setName(rs.getString("name"));
+				dto.setAddr(rs.getString("addr"));
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			try {
+				if(rs!=null)rs.close();
+				if(pstmt!=null)pstmt.close();
+				if(conn!=null)conn.close();
+			} catch (Exception e2) {}
+		}
+		return dto; 
+	}
+	
 	public boolean update(MemberDto dto) {
 		Connection conn = null;
 		PreparedStatement pstmt = null;
