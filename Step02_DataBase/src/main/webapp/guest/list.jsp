@@ -9,13 +9,13 @@
     	GuestDao dao = GuestDao.getInstance();
     	List<GuestDto> list = dao.getList();
     
-    
     %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>list.jsp</title>
+
 </head>
 <body>
 	<div class="container">
@@ -37,8 +37,17 @@
 					<tr>
 						<td><%=tmp.getNum() %></td>
 						<td><%=tmp.getWriter() %></td>
-						<td><textarea rows="2" cols="50"><%=tmp.getContent() %></textarea></td>
+						<td><textarea rows="5"><%=tmp.getContent() %></textarea></td>
 						<td><%=tmp.getRegdate() %></td>
+						<td><a href="updateform.jsp?num=<%=tmp.getNum() %>">수정</a></td>
+						<td>
+							<form action="delete.jsp" method="post">
+							<!-- 화면상에 보이지는 않지만 폼 전송될때 같이 전송되는 input -->
+							<input type="hidden" name="num" value="<%=tmp.getNum() %>" />
+							<input type="text" name="pwd" />
+							<button type="submit">삭제</button>
+							</form>
+						</td>
 					</tr>
 				<%} %>
 			

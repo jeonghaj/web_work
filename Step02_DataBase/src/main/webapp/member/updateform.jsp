@@ -15,24 +15,25 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
 	<h3>회원 정보 수정 양식</h3>
 	<form action="${pageContext.request.contextPath }/member/update.jsp" method="post">
-		<div>
-			<label for="num">번호</label>
-			<input type="text" name="num" id="num" value="<%=dto.getNum() %>" readonly/>
+		<div class="mb-3">
+			<label class="form-label" for="num">번호</label>
+			<input class="form-control" type="text" name="num" id="num" value="<%=dto.getNum() %>" readonly/>
 		</div>
-		<div>
-			<label for="name">이름</label>
-			<input type="text" name="name" id="name" value="<%=dto.getName()%>"/>
+		<div class="mb-3">
+			<label class="form-label" for="name">이름</label>
+			<input class="form-control" type="text" name="name" id="name" value="<%=dto.getName()%>"/>
 		</div>
-		<div>
-			<label for="addr">주소</label>
-			<input type="text" name="addr" id="addr" value="<%=dto.getAddr()%>"/>
+		<div class="mb-3">
+			<label class="form-label" for="addr">주소</label>
+			<input class="form-control" type="text" name="addr" id="addr" value="<%=dto.getAddr()%>"/>
 		</div>
-		<button type="submit">수정 확인</button>
-		<button type="reset">취소</button>
+		<button class="btn btn-outline-success btn-sm" type="submit">수정 확인</button>
+		<button class="btn btn-outline-danger btn-sm" type="reset">취소</button>
 	
 	
 	</form>

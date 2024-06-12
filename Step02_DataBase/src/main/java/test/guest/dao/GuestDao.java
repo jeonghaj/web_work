@@ -6,6 +6,8 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.sql.RowSetInternal;
+
 import test.guest.dto.GuestDto;
 import test.util.DbcpBean;
 
@@ -31,6 +33,122 @@ public class GuestDao {
 	public static GuestDao getInstance() {
 		return GuestDao.dao;
 	}
+	//수정
+	public boolean update(GuestDto dto) {
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		int rowCount = 0;
+		try {
+			//Connection Pool 로 부터 Connection 객체 하나 가져오기 
+			conn = new DbcpBean().getConn();
+			//실행할 sql 문 작성
+			String sql = "update board_guest"
+					+ " set writer=?, content=?"
+					+ " where num=?";
+			pstmt = conn.prepareStatement(sql);
+			// ? 에 바인딩 할 내용이 있으면 여기서 바인딩한다.
+			pstmt.setString(1, dto.getWriter());
+			pstmt.setString(2, dto.getContent());
+			pstmt.setInt(3, dto.getNum());
+			// update 문 실행하고 변화된 rowCount 를 리턴 받는다.
+			rowCount = pstmt.executeUpdate();
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (pstmt != null)
+					pstmt.close();
+				if (conn != null)
+					conn.close();
+			} catch (Exception e) {
+			}
+		}
+		if (rowCount > 0) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	
+	// 삭제
+	public boolean delete(int num) {
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		int rowCount = 0;
+		try {
+			//Connection Pool 로 부터 Connection 객체 하나 가져오기 
+			conn = new DbcpBean().getConn();
+			//실행할 sql 문 작성
+			String sql = "delete from board_guest"
+					+ " where num=?";
+			pstmt = conn.prepareStatement(sql);
+			// ? 에 바인딩 할 내용이 있으면 여기서 바인딩한다.
+			pstmt.setInt(1, num);
+			// update 문 실행하고 변화된 rowCount 를 리턴 받는다.
+			rowCount = pstmt.executeUpdate();
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (pstmt != null)
+					pstmt.close();
+				if (conn != null)
+					conn.close();
+			} catch (Exception e) {
+			}
+		}
+		if (rowCount > 0) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	
+	//글 하나의 정보를 리턴하는 메소드
+	public GuestDto getData(int num) {
+		GuestDto dto = null;
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		try {
+			//Connection Pool 로 부터 Connection 객체 하나 가져오기 
+			conn = new DbcpBean().getConn();
+			//실행할 sql 문 작성 
+			String sql = "select num, writer, content, pwd, regdate"
+					+ " from board_guest"
+					+ " where num=?";
+			pstmt = conn.prepareStatement(sql);
+			// ? 에 바인딩 할 내용이 있으면 여기서 바인딩한다.
+			pstmt.setInt(1, num);
+			rs = pstmt.executeQuery();
+			if (rs.next()) {
+				dto=new GuestDto();
+				dto.setNum(num);
+				dto.setWriter(rs.getString("writer"));
+				dto.setContent(rs.getString("content"));
+				dto.setPwd(rs.getString("pwd"));
+				dto.setRegdate(rs.getString("regdate"));
+			
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (rs != null)
+					rs.close();
+				if (pstmt != null)
+					pstmt.close();
+				if (conn != null)
+					conn.close();
+			} catch (Exception e) {
+			}
+		}
+		return dto;
+	}
+	
+	
+	
+	
 	//글 목록을 리턴하는 메소드
 	public List<GuestDto> getList(){
 		//글 목록을 저장할 ArrayList 객체 생성
