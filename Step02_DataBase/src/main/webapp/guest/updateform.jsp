@@ -15,29 +15,37 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
 	<div class="container">
+		<nav>
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item"><a href="${pageContext.request.contextPath }/">home</a></li>
+				<li class="breadcrumb-item"><a href="${pageContext.request.contextPath }/guest/list.jsp">방명록 목록</a></li>
+				<li class="breadcrumb-item active">글수정</li>
+			</ol>
+		</nav>	
 		<h1>방명록 글 수정 폼</h1>
 		<form action="${pageContext.request.contextPath }/guest/update.jsp" method="post">
-			<div>
-				<label for="num">번호</label>
-				<input type="text" id="num" name="num" value="<%=dto.getNum() %>" readonly/>
+			<div class="mb-3">
+				<label for="num" class="form-label">번호</label>
+				<input type="text" id="num" name="num" class="form-control" value="<%=dto.getNum() %>" readonly/>
 			</div>
-			<div>
-				<label for="writer">작성자</label>
-				<input type="text" id="writer" name="writer" value="<%=dto.getWriter()%>"/>
+			<div class="mb-3">
+				<label for="writer" class="form-label">작성자</label>
+				<input type="text" id="writer" name="writer" class="form-control" value="<%=dto.getWriter()%>"/>
 			</div>
-			<div>
-				<label for="content">내용</label>
-				<textarea id="content" name="content" rows="5"><%=dto.getContent() %></textarea>
+			<div class="mb-3">
+				<label for="content" class="form-label">내용</label>
+				<textarea id="content" name="content" class="form-control" rows="5"><%=dto.getContent() %></textarea>
 			</div>
-			<div>
-				<label for="pwd">글 작성시 입력했던 비밀번호</label>
-				<input type="password" id="pwd" name="pwd"/>
+			<div class="mb-3">
+				<label for="pwd" class="form-label">글 작성시 입력했던 비밀번호</label>
+				<input type="password" id="pwd" name="pwd" class="form-control"/>
 			</div>
-			<button type="submit">수정확인</button>
-			<button type="reset">취소</button>
+  			<button type="submit" class="btn btn-primary">수정확인</button>
+            <button type="reset" class="btn btn-secondary">취소</button>
 		</form>
 	</div>
 </body>

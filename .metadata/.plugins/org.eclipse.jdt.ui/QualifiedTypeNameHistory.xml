@@ -17,4 +17,6 @@
     <fullyQualifiedTypeName name="test.util.DbcpBean"/>
     <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
     <fullyQualifiedTypeName name="test.friend.dto.MemberDto"/>
+    <fullyQualifiedTypeName name="javax.sql.RowSetInternal"/>
+    <fullyQualifiedTypeName name="test.guest.dto.GuestDto"/>
 </qualifiedTypeNameHistroy>

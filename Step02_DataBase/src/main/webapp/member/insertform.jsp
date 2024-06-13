@@ -9,6 +9,14 @@
 </head>
 <body>
 	<div class="container">
+		<nav>
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item"><a href="${pageContext.request.contextPath }/">home</a></li>
+				<li class="breadcrumb-item"><a href="${pageContext.request.contextPath }/member/list.jsp">회원목록</a></li>
+				<li class="breadcrumb-item active">회원 추가</li>
+			</ol>
+		</nav>
+	
 		<h3>회원 추가 양식</h3>
 		<form class="row g-3" action="${pageContext.request.contextPath}/member/insert.jsp" method="post">
 		<div class="col-md-6">
