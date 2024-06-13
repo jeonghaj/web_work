@@ -15,7 +15,7 @@ public class FortuneServlet extends HttpServlet {
 		//오늘의 운세를 얻어오는 비니지스 로직을 수행(DB 에서 읽어왔다고 가정)
 		String fortune="동쪽으로 가면 귀인을 만나요";
 		
-		//오늘의 운세를 request 영역에 담고(HttpSErvletRequest 객체에 담는다)
+		//오늘의 운세를 request 영역에 담고(HttpServletRequest 객체에 담는다)
 		req.setAttribute("fortuneToday", fortune);
 		
 		//클라이언트에게 응답은 jsp 페이지에 위임한다 (forward 이동)
