@@ -5,8 +5,6 @@
     <fullyQualifiedTypeName name="test.servletpac.SendServlet"/>
     <fullyQualifiedTypeName name="java.security.Provider.Service"/>
     <fullyQualifiedTypeName name="org.eclipse.jdt.internal.compiler.batch.Main"/>
-    <fullyQualifiedTypeName name="jakarta.servlet.http.HttpServlet"/>
-    <fullyQualifiedTypeName name="jakarta.servlet.annotation.WebServlet"/>
     <fullyQualifiedTypeName name="test.member.dto.MemberDto"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="org.apache.catalina.Context"/>
@@ -19,4 +17,7 @@
     <fullyQualifiedTypeName name="test.friend.dto.MemberDto"/>
     <fullyQualifiedTypeName name="javax.sql.RowSetInternal"/>
     <fullyQualifiedTypeName name="test.guest.dto.GuestDto"/>
+    <fullyQualifiedTypeName name="jakarta.servlet.http.HttpServlet"/>
+    <fullyQualifiedTypeName name="jakarta.servlet.annotation.WebServlet"/>
+    <fullyQualifiedTypeName name="jakarta.servlet.RequestDispatcher"/>
 </qualifiedTypeNameHistroy>
