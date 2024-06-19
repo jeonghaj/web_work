@@ -5,4 +5,5 @@
   <module moduleId="org.eclipse.jst.jee.server:Step02_Test" serverId="Tomcat v10.1 Server at localhost"/>
   <module moduleId="org.eclipse.jst.jee.server:Step01_Servlet" serverId="Tomcat v10.1 Server at localhost"/>
   <module moduleId="org.eclipse.jst.jee.server:Step04_Fetch" serverId="Tomcat v10.1 Server at localhost"/>
+  <module moduleId="org.eclipse.jst.jee.server:Step05" serverId="Tomcat v10.1 Server at localhost"/>
 </modules>

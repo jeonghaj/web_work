@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="WorkbenchPreferenceDialog.dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="-210"/>
+		<item key="DIALOG_X_ORIGIN" value="99"/>
 		<item key="DIALOG_Y_ORIGIN" value="14"/>
 		<item key="DIALOG_WIDTH" value="1008"/>
 		<item key="DIALOG_HEIGHT" value="1018"/>
@@ -10,8 +10,8 @@
 	<section name="PropertyDialog.dialogBounds">
 		<item key="DIALOG_X_ORIGIN" value="96"/>
 		<item key="DIALOG_Y_ORIGIN" value="8"/>
-		<item key="DIALOG_WIDTH" value="902"/>
-		<item key="DIALOG_HEIGHT" value="579"/>
+		<item key="DIALOG_WIDTH" value="929"/>
+		<item key="DIALOG_HEIGHT" value="696"/>
 		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
 	</section>
 	<section name="org.eclipse.ui.internal.QuickAccess">
@@ -27,5 +27,12 @@
 		</list>
 		<list key="textArray">
 		</list>
+	</section>
+	<section name="InstallationDialogSettings">
+		<item key="DIALOG_X_ORIGIN" value="65"/>
+		<item key="DIALOG_Y_ORIGIN" value="-205"/>
+		<item key="DIALOG_WIDTH" value="698"/>
+		<item key="DIALOG_HEIGHT" value="735"/>
+		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
 	</section>
 </section>
