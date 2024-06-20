@@ -1,3 +1,4 @@
+<%@page import="javax.servlet.http.Cookie"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%
@@ -12,7 +13,7 @@
 		Cookie cook2=new Cookie("savedPwd", pwd);
 		cook1.setMaxAge(60*60*24*7);
 		cook2.setMaxAge(60*60*24*7);
-		response.addCookie(cook1);
+		response.addCookie(cook1); //응답할때 쿠키 보내기
 		response.addCookie(cook2);
 	}else{
 		//특정 키값으로 저장된 쿠키값 삭제하기 (value 에는 아무 값이나 넣어도 상관없다)
@@ -20,7 +21,7 @@
 		Cookie cook2=new Cookie("savedPwd", null);
 		cook1.setMaxAge(0);
 		cook2.setMaxAge(0);
-		response.addCookie(cook1);
+		response.addCookie(cook1); //응답할때 쿠키 보내기(빈상태로) = 지우기
 		response.addCookie(cook2);
 	}	
 %>
