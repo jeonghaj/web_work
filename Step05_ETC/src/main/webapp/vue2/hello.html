@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- vue js 로딩하기 -->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+	<div id="one">
+		<input type="text" id="inputMsg" />
+		<button id="printBtn">출력하기</button>
+		<p id="result"></p>
+	</div>
+	
+<script>
+	document.querySelector("#printBtn").assEventListener("click",()=>{
+		document.querySelector("#result").innerText = document.querySelector("#inputMsg").value;
+	})
+
+</script>
+
+	<div id="two">
+		<input type="text" v-model="msg"/>
+		<button v-on:click="print">출력하기</button>
+		<p>msg : <strong>{{msg}}</strong></p>
+		<p>{{result}}</p>
+	</div>
+<script>
+	//로딩된 vue js 를 활용해서 동작 정의하기
+	new Vue({
+		el:"#two",
+		data:{
+			result:"",
+			msg:""
+		},
+		methods:{
+			print:function(){
+				this.result = this.msg;
+			}
+		}
+	})
+</script>
+</body>
+</html>
