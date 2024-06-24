@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<style>
+	.box {
+	 width : 500px;
+	 height : 500px;
+	 border: 1px solid red;
+	}
+</style>
+</head>
+<body>
+	<div class="container" id="app">
+		<h1>마우스 이벤트 처리</h1>
+		<div class="box" @mousemove="onMouseMove">
+			x: <strong>{{x}}</strong>
+			<br />
+			y: <strong>{{y}}</strong>
+		</div>
+	</div>
+	<script>
+		new Vue({
+			el:"#app",
+			data:{
+				x:0, y:0
+			},
+			methods:{
+				onMouseMove(e){
+					this.x = e.offsetX
+					this.y = e.offsetY
+				}
+			}
+		})
+	</script>
+</body>
+</html>

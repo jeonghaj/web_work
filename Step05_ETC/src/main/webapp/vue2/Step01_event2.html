@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+	<div class="container" id="app">
+		<h1>이벤트 처리</h1>
+		<button v-on:click="minus">-</button>
+		<strong>{{count}}</strong>
+		<button v-on:click="plus">+</button>
+		
+	</div>
+	<script>
+		new Vue({
+			el:"#app",
+			data:{
+				count:0
+			},
+			methods:{
+				minus(){
+					this.count = this.count -1
+				},
+				plus(){
+					this.count++
+				}
+			}
+		});
+	</script>
+</body>
+</html>

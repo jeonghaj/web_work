@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<style>
+	.box{
+		width : 100px;
+		height : 100px;
+		border : 1px solid red;
+	}
+</style>
+</head>
+<body>
+	<div class="container" id="app">
+		<h1>이벤트가 일어난 바로 그 요소</h1>
+		<div class="box" @click="divClicked">div1</div>
+		<div class="box" @click="divClicked">div2</div>
+		<div class="box" @click="divClicked">div3</div>
+		<div class="box" @click="divClicked">div4</div>
+		<div class="box" @click="divClicked">div5</div>
+	</div>
+	<script>
+	//클릭한 div의 innerText 를 "clicked" 배경색을 "yello" 로 변경되도록 하시오
+	new Vue({
+		el:"#app",
+		data:{},
+		methods:{divClicked(e){
+				e.target.style.backgroundColor = "yellow"	
+				e.target.textContent = "clicked"				
+			}
+		}
+	})
+	
+	</script>
+</body>
+</html>

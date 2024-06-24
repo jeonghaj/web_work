@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+    <h1>v-model 사용하기2</h1>
+    <div id="app">
+        <input type="text" v-model="msg">
+        <br>
+        <!-- 체크박스에 모델을 지정하면 체크 여부가 boolean 값으로 관리가 된다. -->
+        <input type="checkbox" v-model="isChecked">
+        <br>
+        <!-- select 에 모델을 지정하면 선택한 option 의 vaule 가 모델의 값으로 관리가 된다. -->
+        <select v-model="lunch">
+            <option value="">선택</option>
+            <option value="ramen">라면</option>
+            <option value="kimbap">김밥</option>
+            <option value="dduk">떡복기</option>
+        </select>
+        <br>
+        <textarea v-model="comment"></textarea>
+        <br>
+        <!-- 
+            boolean 값으로 관리 하지 않고 
+            원하는 문자열 값으로 관리하기 
+        -->
+        <input type="checkbox" 
+            v-model="isRun" 
+            true-value="yes"
+            false-value="no">
+        <p>
+            msg : <strong>{{msg}}</strong>
+            <br>
+            isChecked : <strong>{{isChecked}}</strong>
+            <br>
+            lunch : <strong>{{lunch}}</strong>
+            <br>
+            comment : <strong v-text="comment"></strong>
+            <br>
+            isRun : <strong v-text="isRun"></strong>
+        </p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        let app=new Vue({
+            el:"#app",
+            data:{
+                msg:"",
+                isChecked:true,
+                lunch:"",
+                comment:"",
+                isRun:"no"
+            },
+            methods:{
+              
+            }
+        });
+    </script>   
+</body>
+</html>

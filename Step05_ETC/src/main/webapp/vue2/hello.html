@@ -29,13 +29,14 @@
 <script>
 	//로딩된 vue js 를 활용해서 동작 정의하기
 	new Vue({
-		el:"#two",
-		data:{
+		el:"#two", //어떤 요소에 일어나는 일을 제어할 것인지 선택자를 명시한다.
+		data:{    // 해당 요소에서 필요로 하는 모델을 만들어 놓고 사용할 수 있다.
 			result:"",
 			msg:""
 		},
-		methods:{
+		methods:{ // 해당 요소에서 필요한 함수(메소드)를 만들어 놓고 사용할 수 있다
 			print:function(){
+				//함수 안에서 모델을 참조하는 방법은 this.모델명
 				this.result = this.msg;
 			}
 		}
