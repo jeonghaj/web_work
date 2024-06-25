@@ -14,6 +14,14 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<style>
+	#profileImage{
+		width:100px;
+		height:100px;
+		border: 1px solid red;
+		
+	}
+</style>
 </head>
 <body>
 	<div class="container">

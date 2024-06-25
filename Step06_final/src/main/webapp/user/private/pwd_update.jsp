@@ -14,7 +14,7 @@
     	//현재 비밀번호
     	String currentPwd = UserDao.getInstance().getData(id).getPwd();
     	//만일 현재 비밀번호하고 입력한 비밀번호와 같으면
-    	if(currentPwd.equals("pwd")){
+    	if(currentPwd.equals(pwd)){
     		//수정 작업을 진행
     		UserDto dto = new UserDto();
     		dto.setId(id);
@@ -43,7 +43,7 @@
 	<%}else{ %>
 		<p>
 			구 비밀번호가 일치하지 않습니다.
-			<a href="${pageContext.request.contextPath }/user/protected/pwd_updateform.jsp">다시 시도</a>
+			<a href="${pageContext.request.contextPath }/user/private/pwd_updateform.jsp">다시 시도</a>
 		</p>
 	<%} %>
 </div>
