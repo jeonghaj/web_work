@@ -19,6 +19,41 @@ public class UserDao {
 	public static UserDao getInstance() {
 		return dao;
 	}
+	public boolean updatePwd(UserDto dto) {
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		int rowCount = 0;
+		try {
+			//Connection Pool 로 부터 Connection 객체 하나 가져오기 
+			conn = new DbcpBean().getConn();
+			//실행할 sql 문 작성
+			String sql = " update user_info"
+					+ " set pwd = ?"
+					+ " where id = ?";
+			pstmt = conn.prepareStatement(sql);
+			// ? 에 바인딩 할 내용이 있으면 여기서 바인딩한다.
+			pstmt.setString(1, dto.getPwd());
+			pstmt.setString(2, dto.getId());
+			// update 문 실행하고 변화된 rowCount 를 리턴 받는다.
+			rowCount = pstmt.executeUpdate();
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (pstmt != null)
+					pstmt.close();
+				if (conn != null)
+					conn.close();
+			} catch (Exception e) {
+			}
+		}
+		if (rowCount > 0) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	
 	public UserDto getData(String id) {
 		UserDto dto = null;
 		Connection conn = null;

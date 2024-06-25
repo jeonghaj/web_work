@@ -7,6 +7,11 @@
 <body>
     <h1>v-model 사용하기2</h1>
     <div id="app">
+    	<!-- 
+    	v-model = "msg" 의 의미 
+    	해당 input 요소에 입력한 내용을 msg 라는 이름의 모델에 즉시반영 
+    	
+    	-->
         <input type="text" v-model="msg">
         <br>
         <!-- 체크박스에 모델을 지정하면 체크 여부가 boolean 값으로 관리가 된다. -->
@@ -23,8 +28,7 @@
         <textarea v-model="comment"></textarea>
         <br>
         <!-- 
-            boolean 값으로 관리 하지 않고 
-            원하는 문자열 값으로 관리하기 
+            boolean 값으로 관리 하지 않고 원하는 문자열 값으로 관리하기 
         -->
         <input type="checkbox" 
             v-model="isRun" 
@@ -37,7 +41,8 @@
             <br>
             lunch : <strong>{{lunch}}</strong>
             <br>
-            comment : <strong v-text="comment"></strong>
+            <!-- pre 요소는 개행기호도 해석  -->
+            comment : <pre v-text="comment"></pre>
             <br>
             isRun : <strong v-text="isRun"></strong>
         </p>

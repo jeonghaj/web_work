@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Step03_class.html</title>
+<style>
+	.box{
+		width:100px;
+		height:100px;
+		border:1px solid red;
+	}
+	.bigger{
+		width:200px;
+		height:200px;
+	}
+	.yellow-bg{
+		background-color: yellow;
+	}
+
+</style>
+</head>
+<body>
+	<div class="container" id="app">
+		<h1>클래스 추가 및 제거</h1>
+		<div class="box bigger yellow-bg">div1</div>
+		
+		<div id="one">div2</div>
+		<script>
+			document.querySelector("#one").classList.add("box")
+		</script>
+		
+		<div v-bind:class="{box:true, bigger:true, 'yellow-bg':true}">div3</div>
+		<div v-bind:class="['box','bigger']">div4</div>
+		<label>
+			<input type="checkbox" v-model="isBox" /> box
+		</label>
+		<label>
+			<input type="checkbox" v-model="isBigger" /> bigger
+		</label>
+		<label>
+			<input type="checkbox" v-model="isYellow" /> yellow
+		</label>
+		<div v-bind:class="{box:isBox, bigger:isBigger, 'yellow-bg':isYellow}">div5</div>
+		<div :class="{box:isBox, bigger:isBigger, 'yellow-bg':isYellow}">div6</div>
+	</div>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+	new Vue({
+		el:"#app",
+		data:{
+			isBox:true,
+			isBigger:false,
+			isYellow:false
+		}
+	});
+</script>
+</body>
+</html>
