@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div class="container" id="app">
+		<ul>
+			<li v-for="item in [`김구라`,`해골`,`원숭이`]">{{item}}</li>
+		</ul>
+		<h3>동물 목록</h3>
+		<ul>
+			<li v-for="item in animals">{{item}}</li>
+		</ul>
+		<h3>회원 목록</h3>
+		<ul>
+			<li v-for="tmp in members">번호:{{tmp.num}} 이름:{{tmp.name}} 주소:{{tmp.addr}}</li>
+		</ul>
+		<h3>회원 목록 테이블</h3>
+		<table>
+			<tr>
+				<th>번호</th>
+				<th>이름</th>
+				<th>주소</th>				
+			</tr>
+			<tr v-for="tmp in members">
+				<td>{{tmp.num}}</td>
+				<td>{{tmp.name}}</td>
+				<td>{{tmp.addr}}</td>
+			</tr>
+		</table>
+		<h3>회원 목록 테이블2</h3>
+		<table>
+			<tr>
+				<th>번호</th>
+				<th>이름</th>
+				<th>주소</th>				
+			</tr>
+			<tr v-for="tmp in members2">
+				<td>{{tmp.num}}</td>
+				<td>{{tmp.name}}</td>
+				<td>{{tmp.addr}}</td>
+			</tr>
+		</table >
+		<button @click="getMembers">목록 받아오기</button>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script>
+		new Vue({
+			el : "#app",
+			data : {
+				animals : [ "강아지", "고양이", "곰" ],
+				members : [ 
+					{num:1, name:"김구라", addr:"노량진"},
+					{num:2, name:"해골", addr:"행신동"},
+					{num:3, name:"원숭이", addr:"동물원"} 
+				],
+				members2:[]
+			},
+			methods:{
+				getMembers(){
+					// this.members 가 서버로 부터 받아온 데이터라고 가정하자
+					this.members2 = this.members
+				}
+			}
+		})
+	</script>
+</body>
+</html>
