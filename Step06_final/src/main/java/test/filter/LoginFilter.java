@@ -20,7 +20,7 @@ import javax.servlet.http.HttpSession;
  * 3. @wevFilter 어노테이션을 이용해서 필터 맵핑
  */
 //game, stop 하위의 모든 요청들은 필터를 거친다.
-@WebFilter({"/user/private/*"})
+@WebFilter({"/user/private/*","/file/private/*"})
 public class LoginFilter implements Filter{
 	@Override
 	public void destroy() {	

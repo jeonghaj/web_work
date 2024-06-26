@@ -24,6 +24,9 @@
 			</c:otherwise>
 		</c:choose>
 		<h1>인덱스 페이지 입니다.</h1>
+		<ul>
+			<li><a href="${pageContext.request.contextPath }/user/file/list.jsp">자료실 목록보기</a></li>
+		</ul>
 	</div>
 </body>
 </html>
