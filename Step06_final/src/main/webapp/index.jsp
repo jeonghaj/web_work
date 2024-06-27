@@ -26,6 +26,9 @@
 		<h1>인덱스 페이지 입니다.</h1>
 		<ul>
 			<li><a href="${pageContext.request.contextPath }/user/file/list.jsp">자료실 목록보기</a></li>
+			<li><a href="${pageContext.request.contextPath }/shop/buy.jsp?id=1&count=2">1번상품 2개 구매하기</a></li>
+			<li><a href="${pageContext.request.contextPath }/shop/buy.jsp?id=5&count=3">5번상품 3개 구매하기</a></li>
+			<li><a href="${pageContext.request.contextPath }/cafe/list.jsp">글목록보기</a></li>
 		</ul>
 	</div>
 </body>

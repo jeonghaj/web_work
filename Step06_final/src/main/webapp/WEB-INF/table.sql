@@ -16,3 +16,20 @@ regdate date
 );
 
 create sequence board_file_seq;
+
+create table board_cafe(
+num number primary key, --글번호
+writer varchar2(100) not null, --작성자
+title varchar2(100) not null, --제목
+content CLOB, --글 내용
+viewCount number, --조회수
+regdate date --글 작성일
+);
+--게시글 번호를 얻어낼 시퀀스
+create sequence board_cafe_seq;
+
+--어떤 세션에서 몇번글을 읽었는지 정보를 저장할 테이블
+create table readed_data(
+num number references board_cafe(num),
+session_id varchar2(50)
+);

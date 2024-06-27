@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+.box {
+	width: 100px;
+	height: 100px;
+	background-color: lightblue;
+	border: 1px solid red;
+}
+</style>
+</head>
+<body>
+	<div class="container" id="app">
+		<h1>재사용 가능한 component 정의하고 사용하기</h1>
+		<my-component></my-component>
+
+		<h1>property 값을 전달할 수 있는 your-component사용하기</h1>
+		<your-component v-bind:title=" '김구라' "></your-component>
+		<your-component v-bind:title=" name "></your-component>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script>
+/*
+ *	재사용 가능한 컴포넌트를 전역으로 정의하기
+ 	Veu.component("컴포넌트 이름", {컴포넌트 데이터})
+ */
+ 
+ 	Vue.component("my-component", {
+ 		template:`<div class-"box">box</div>`
+ 	})
+ 	Vue.component("your-component",{
+ 		template:`<div class="box">{{title}}</div>`,
+ 		props:["title"]
+ 	})
+		new Vue({
+			el : "#app",
+			data : {
+				name : "원숭이"
+			}
+		})
+	</script>
+</body>
+</html>

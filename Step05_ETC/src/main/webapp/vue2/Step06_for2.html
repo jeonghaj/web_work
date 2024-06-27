@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div class="container" id="app">
+		<input id="one" type="text" placeholder="메세지 입력" v-model="msg"/>
+		<button @click="clicked">추가</button>
+		<ul>
+			<li v-for="tmp in msgs">{{tmp}}</li>
+		</ul>
+	</div>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+	new Vue({
+		el:"#app",
+		data:{
+			msg:"",
+			msgs:["hi"]
+		},
+		methods:{
+			clicked(e){
+ 				//모델로 관리되는 배열에 입력된 msg를 추가하기
+				//this.msgs.push(this.msg) 
+				
+				//배열은 concat() 이라는 함수를 가지고 있다.
+				//기존 배열에 저장된 내용에 아이템이 추가된 새로운 배열의 참조값을 리턴한다.
+				//즉, 새로운 배열의 참조값을 얻어내서 모델에 덮어쓰기가 가능하다.
+				//this.msgs = this.msgs.concat(this.msg);
+ 				
+ 				//새로운 배열안에 this.msgs 배열에 저장된 아이템을 펼쳐놓고, this.msg 도 추가한다.
+ 				//그런다음 모델에 덮어쓰기
+				this.msgs = [...this.msgs, this.msg]
+ 				//input 요소에 focus 주기
+ 				//intput 요소의 참조값.focus();
+ 				//여기는 버튼의 동작을 하는 함수이기때문에 이벤트 객체를 받아도 버튼요소의 참조값이 나온다.
+ 				//id를 사용해서 얻어낼 수 있지만 id를 많이 사용하는것은 겹칠 위험이 있다
+ 				
+ 				//입력창 초기화
+ 				this.msg="";
+ 				//ref='one' 이 부여된 문서 객체의 참조값은 this.$ref.one 하면 얻어낼 수 있다.
+ 				this.$ref.one.focus();
+			}
+		}
+	})
+
+</script>
+</body>
+</html>
