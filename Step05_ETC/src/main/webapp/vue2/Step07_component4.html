@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Step07_component4.html</title>
+</head>
+<body>
+	<div class="container" id="app">
+		<counter v-bind:color="'red'"></counter>
+		<counter :color="'green'"></counter>
+		<counter :color="'blue'"  @ten="onTen"></counter>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script>
+		Vue.component("counter", {
+			data(){
+				return {
+					count:0
+				};
+			},
+			methods:{
+				clicked(){
+					this.count++;
+					//만일 count 가 10의 배수라면
+					if(this.count%10 == 0){
+						//this.$emit("ten");
+						// "ten" 이라는 이벤트를 발생시키면서 {} object 에 현재 count 값을 담아서 전달하기
+						this.$emit("ten", {current:this.count});
+					}
+				}
+			},
+			props:["color"],
+			template:`
+				<button @click="clicked" v-bind:style="{color:color}">{{count}}</button>
+			`
+		});	
+	
+		new Vue({
+			el:"#app",
+			data:{},
+			methods:{
+				onTen(e){
+					console.log("10의 배수네?");
+					console.log("현재 값은:"+e.current);
+				}
+			}
+		})
+	</script>
+</body>
+</html>

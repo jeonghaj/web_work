@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>/static/index.html</title>
+</head>
+<body>
+	<div class="container">
+		<h1>인덱스 페이지 입니다</h1>
+		<ul>
+			<li><a href="/boot02/hello">hello spring boot!</a></li>
+			<li><a href="/boot02/fortune">오늘의 운세</a></li>
+			<li><a href="/boot02/member">회원 한명의 정보</a></li>
+			<li><a href="/boot02/member2">회원 한명의 정보2</a></li>
+			<li><a href="/boot02/friends">친구 목록</a></li>
+			<li><a href="/boot02/members">회원 목록</a></li>
+		</ul>
+		
+		<form action="/boot02/send" method="post">
+			<input type="text" name="msg" placeholder="할말 입력..."/>
+			<button type="submit">전송</button>
+		</form>
+		
+		<br />
+		
+		<form action="/boot02/send2" method="post">
+			<input type="text" name="msg" placeholder="할말 입력..."/>
+			<button type="submit">전송</button>
+		</form>
+		
+		<br />
+		
+		<form action="/boot02/send3" method="post">
+			<input type="text" name="num" placeholder="번호 입력..." />
+			<br />
+			<input type="text" name="name" placeholder="이름 입력..."/>
+			<br />
+			<button type="submit">저장</button>
+		</form>
+		
+		<br />
+		
+		<form action="/boot02/send4" method="post">
+			<input type="text" name="num" placeholder="번호 입력..." />
+			<br />
+			<input type="text" name="name" placeholder="이름 입력..."/>
+			<br />
+			<button type="submit">저장</button>
+		</form>
+	</div>
+</body>
+</html>
