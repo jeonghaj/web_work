@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div class="container">
+		<h3>공지사항</h3>
+		<!--/*
+			th:each 를 이용해서 반복적으로 마크럽을 출력할 수 있다
+			list 는 List<String> type 이기 때문에 tmp 는 String type 이다
+			String type 이기 떄문에 직접 출력이 가능하다.
+		*/-->
+		<ul>
+			<li th:each="tmp : ${list}">[[${tmp}]]</li>
+		</ul>
+		<h3>공지사항2</h3>
+		<ul>
+			<li th:each="tmp : ${list}" th:text="${tmp}"></li>
+		</ul>
+		<h3>공지사항3</h3>
+		<ul>
+			<li th:each="tmp,status : ${list}">
+			
+				count : [[${status.count}]]
+				index : [[${status.index}]]
+				size  : [[${status.size}]]
+				even  : [[${status.even}]]
+				odd   : [[${status.odd}]]
+				first : [[${status.first}]]
+				last  : [[${status.last}]]
+				current : [[${status.current}]]
+				</li>
+		</ul>
+		
+		<h3>공지사항4</h3>
+		<th:block th:each="tmp,status : ${list}">
+			<h4>[[${status.count}]] 번째 내용</h4>
+			<p>[[${tmp}]]</p>
+		</th:block>
+	</div>
+</body>
+</html>

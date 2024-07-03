@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div class="container">
+		<h1>회원 한명의 정보</h1>
+		<p>
+			번호 : <strong>[[${dto.num}]]</strong>
+			이름 : <strong>[[${dto.name}]]</strong>
+			주소 : <strong th:text="${dto.addr}"></strong>
+		</p>
+	</div>
+</body>
+</html>

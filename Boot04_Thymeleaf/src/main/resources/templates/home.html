@@ -3,16 +3,43 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link rel="stylesheet" th:href="@{/css/bootstrap}">
+<script th:src="@{/js/bootstrap.js}"></script>
 </head>
 <body>
+	<!-- 웹브라우저가 무시하는 주석  -->
+	<!--/* Thymeleaf가 무시하는 주석 */-->
 	<div class="container">
-		<h3>인덱스 페이지 입니다.</h3>
+		<h3 th>인덱스 페이지 입니다.</h3>
 		<p>
 			오늘의 인물 : <strong>[[${personToday}]]</strong>
 		</p>
 		<p>
 			오늘의 인물 : <strong th:text="${personToday}"></strong>
+			<img src="/boot04/images/kim1.png"/>
+			<img th:src="@{/images/kim1.png}"/>
 		</p>
+		<ul>
+			<li><a href="/boot04/sub/play">놀러가기</a></li>
+			<li><a th:href="@{/sub/play}">놀러가기2</a></li>
+			<li><a th:href="@{/notice}">공지사항</a></li>
+			<li><a th:href="@{/member}">회원 한명의 정보</a></li>
+			<li><a th:href="@{/members}">회원목록</a></li>
+			<li><a th:href="@{/shop/buy?id=999&count=3}">999번 상품 3개 구매</a></li>
+			<li><a th:href="@{'/shop/buy?id='+ ${id}+'&count='+${count}}">999번 상품 3개 구매</a></li>
+			<!--/* 파이프 문자로 감싸면 javascript 의 backtic 으로 감싼 효과를 낼 수 있다. */-->
+			<li><a th:href="@{|/shop/buy?id=${id}&count=${count}|}">999번 상품 3개 구매</a></li>
+			<li><a th:href="@{/shop/buy(id=${id}, count=${count})}">999번 상품 3개 구매</a></li>
+			<li><a th:href="@{/inc}">include 테스트</a></li>
+			<li><a th:href="@{/unescape}">unescape html 테스트</a></li>
+		</ul>
 	</div>
+	<script>
+		let myName="[[${personToday}]]"
+	</script>
+	<!--/*  
+		/templates/include/footer.html 페이지에 있는 myFooter 이라는 이름의 조각을 이 블럭 안에 넣어라
+	*/-->
+	<th:block th:insert="~{include/footer :: myFooter}"></th:block>
 </body>
 </html>

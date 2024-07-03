@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div class="container">
+		<h3>unescape Test</h3>
+		<p>
+			content : <strong th:text="${content}"></strong>
+		</p>
+		<p>
+			content : <strong th:utext="${content}"></strong>
+		</p>
+		<p>
+			content : <strong>[[${content}]]</strong>
+		</p>
+		<p>
+			content : <strong>[(${content})]</strong>
+		</p>
+	</div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- /* /include/resource.html 페이지 전체 내용을 포함 시키기 */ -->
+<th:block th:insert="~{/include/resource}"></th:block>
+</head>
+<body>
+	<div class="container">
+		<h3>본문 내용 입니다.</h3>
+		<ul>
+			<li>One</li>
+			<li>Two</li>
+		</ul>
+	</div>
+	
+	<th:block th:insert="~{include/footer :: myFooter}"></th:block>
+	
+	<!--/* 이 div 안에 insert 하기*/-->
+	<div th:insert="~{/include/footer :: myFooter}" style="border:1px dotted blue;"></div>
+	<!--/* 이 div 안에 replace(대체) 하기*/-->
+	<div th:replace="~{/include/footer :: myFooter}" style="border:1px dotted blue;"></div>
+	
+	<div th:replace="~{/include/footer :: yourFooter('hi footer')}"></div>
+	
+	<div th:replace="~{/include/footer :: yourFooter('bye footer')}"></div>
+</body>
+</html>

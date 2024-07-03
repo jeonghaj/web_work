@@ -18,7 +18,9 @@ import com.example.boot03.dto.MemberDto;
  * jsp 페이지에게 응답에 필요한 데이터를 전달하는 방법
  * 
  * 1. HttpServletRequest 객체에 .setAttribute() 메소드를 이용해서 담는다.
+ * 
  * 2. Model 객체에 .addAttribute() 메소드를 이용해서 담는다.
+ * - spring framework 에서 제공하는 기능
  */
 @Controller
 public class HomeController {
