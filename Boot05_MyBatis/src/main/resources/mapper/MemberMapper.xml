@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="member">
+	<select id="getList" resultType="com.example.boot05.dto.MemberDto">
+		select num, name, addr
+		from member
+		order by num asc
+	</select>
+	
+	<!-- #{name} 은 MemberDto 객체의 getName() 메소드를 호출해서 리턴되는 값을 해당 위치에 바인딩 하라는 의미이다 -->
+	<!-- #{addr} 은 MemberDto 객체의 getAddr() 메소드를 호출해서 리턴되는 값을 해당 위치에 바인딩 하라는 의미이다 -->
+	
+	<insert id="insert" parameterType="memberDto">
+		insert into member
+		(num, name, addr)
+		values(member_seq.nextval, #{name}, #{addr})
+	</insert>
+	
+	<!-- parameterType 으로 전달된 테이터는 숫자 1개 이기 떄문에 데이터 표현식 #{} 안에 문자열을 아무거나 적어도 동작한다.-->
+	<delete id="delete" parameterType="int">
+		delete from member
+		where num=#{num}
+	</delete>
+	
+	<update id="update" parameterType="com.example.boot05.dto.MemberDto">
+		update member
+		set name=#{name}, addr=#{addr}
+		where num=#{num}
+	</update>
+	<!-- parameter 로 전달된 테이더가 int type 이기 때문에 parameterType=int -->
+	<!-- select 된 row 하나의 정보를 MemberDto 객체에 담아야 하기 때문에 resultType = MemberDto -->
+	<select id="getData" parameterType="int" resultType="com.example.boot05.dto.MemberDto">
+		select num, name, addr
+		from member
+		where num = #{num}
+	</select>
+
+</mapper>
