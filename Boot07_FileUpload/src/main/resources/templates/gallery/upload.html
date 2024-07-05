@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div class="container">
+		<p>이미지를 업로드 했습니다.</p>
+		<p>
+			저장된 파일명 : <strong>[[${saveFileName}]]</strong>
+		</p>
+		<p>
+			실제 이미지 : <img th:src="@{'/gallery/images/'+${saveFileName}}" alt="" />
+		</p>
+	</div>
+</body>
+</html>

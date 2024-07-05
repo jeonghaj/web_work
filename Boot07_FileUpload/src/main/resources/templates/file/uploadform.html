@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div class="container">
+		<h3>파일 업로드 테스트</h3>
+		<form th:action="@{/file/upload}" method="post" enctype="multipart/form-data">
+			<input type="text" name="title" placeholder="제목입력" />
+			<br />
+			파일<input type="file" name="myFile" />
+			<br />
+			<button type="submit">업로드</button>
+		</form>
+		
+		<h3>파일 업로드 테스트2</h3>
+		<form th:action="@{/file/upload2}" method="post" enctype="multipart/form-data">
+			<input type="text" name="title" placeholder="제목입력" />
+			<br />
+			파일<input type="file" name="myFile" />
+			<br />
+			<button type="submit">업로드</button>
+		</form>		
+	</div>
+</body>
+</html>
