@@ -7,7 +7,7 @@
 <body>
 	<div class="container">
 		<h3>이미지 업로드 테스트</h3>
-		<form th:action="@{/gallery/upload}" method="post" enctype="multipart/fotm-data">
+		<form th:action="@{/gallery/upload}" method="post" enctype="multipart/form-data">
 		<!-- 이미지 파일만 선택할 수 있도록 accept="image/*" 로 제한한다 -->
 		이미지 <input type="file" name="image" accept="image/*" />
 		<button type="submit">업로드</button>

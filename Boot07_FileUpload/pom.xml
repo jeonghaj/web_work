@@ -55,6 +55,13 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+				<!-- UOUtils 를 사용하기 위한 dependency -->
+		<dependency>
+		    <groupId>commons-io</groupId>
+		    <artifactId>commons-io</artifactId>
+		    <version>2.15.1</version>
+		</dependency>
+		
 	</dependencies>
 
 	<build>

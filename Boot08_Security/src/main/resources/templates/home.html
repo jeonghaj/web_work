@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div class="container">
+	<!-- spring security 관련 속성  -->
+		<div sec:authorize="isAuthenticated()"> <!-- 로그인 되어있는지 true/false -->
+			<strong sec:authentication="name"></strong> 님 로그인중 <!-- 누가 로그인 되어있는지 -->
+			<br />
+			<strong>[[${#authentication.principal.username}]]</strong> 님 로그인중<!-- option2  -->
+			<br />
+			<a th:href="@{/user/logout}">로그아웃</a>
+		</div>
+		<div sec:authorize="!isAuthenticated()">
+			로그인중이 아님
+			<a th:href="@{/user/loginform}">로그인 하러가기</a>
+		</div>
+		
+		<h1>인덱스 페이지 입니다.</h1>
+		<ul>
+			<li><a th:href="@{/play}">놀러가기(로그인 필요 없음)</a></li>
+			<li><a th:href="@{/study?name=kim&amount=999}">공부하러 가기</a></li>
+		</ul>
+	</div>
+</body>
+</html>

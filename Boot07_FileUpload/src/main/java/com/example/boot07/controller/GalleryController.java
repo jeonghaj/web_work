@@ -1,13 +1,20 @@
 package com.example.boot07.controller;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.UUID;
 
+import org.apache.commons.io.IOUtils;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
 @Controller
@@ -15,6 +22,25 @@ public class GalleryController {
 	
 	@Value("${file.location}")
 	private String fileLocation;
+	
+	@ResponseBody
+	@GetMapping(
+		value="/gallery/images/{imageName}",
+		produces = {MediaType.IMAGE_JPEG_VALUE, MediaType.IMAGE_PNG_VALUE, 
+				MediaType.IMAGE_GIF_VALUE}	
+	)
+	//@GetMapping("/gallery/images/{imageName}")
+	public byte[] image(@PathVariable("imageName") String name) throws IOException {
+		// imageName 경로 변수에 들어 있는 문자열이 매개변수 String name 에 전달된다.
+		//읽어들일 파일의 절대 경로 
+		String absolutePath=fileLocation + File.separator + name;
+		// 파일에서 읽어들일 InputStream 
+		InputStream is=new FileInputStream(absolutePath);
+		
+		// org.apache.commons.io.IOUtils;
+		return IOUtils.toByteArray(is);
+	}
+	
 	
 	@GetMapping("/gallery/uploadform")
 	public String uploadform() {
@@ -38,6 +64,7 @@ public class GalleryController {
 					e.printStackTrace();
 				}
 				m.addAttribute("saveFileName", saveFileName);
+				
 		return "gallery/upload";
 	}
 }
