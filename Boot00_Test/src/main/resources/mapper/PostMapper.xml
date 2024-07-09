@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="post">
+	<insert id="insert" parameterType="com.example.boot00.dto.PostDto">
+		insert into board_post
+		(id, title, author)
+		values(board_post_seq.nextval, #{title}, #{author})
+	</insert>
+	
+	<select id="getList" resultType="json">
+		select id, title, author
+		from board_post
+	</select>
+</mapper>
