@@ -10,5 +10,14 @@
 	<select id="getList" resultType="json">
 		select id, title, author
 		from board_post
+		order by id asc
 	</select>
+	
+	<select id="getData" parameterType="int">
+		select id, title, author
+		from board_post
+		where id = #{num}	
+	</select>
+	
+	
 </mapper>

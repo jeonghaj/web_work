@@ -19,7 +19,7 @@
 			<c:otherwise>
 				<p>
 					<a href="${pageContext.request.contextPath }/user/loginform.jsp">로그인</a>
-					<a href="${pageContext.request.contextPath }/user/signup_form.jsp">회원가입</a>
+					<a href="${pageContext.request.contextPath }/user/signup_form.jsp">회원가입</a>ja
 				</p>
 			</c:otherwise>
 		</c:choose>

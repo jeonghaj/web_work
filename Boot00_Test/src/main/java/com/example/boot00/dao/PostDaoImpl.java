@@ -25,4 +25,10 @@ public class PostDaoImpl implements PostDao{
 		return list;
 	}
 
+	@Override
+	public PostDto getData(int num) {
+		PostDto dto = session.selectOne("post.getData", num);
+		return dto;
+	}
+
 }
