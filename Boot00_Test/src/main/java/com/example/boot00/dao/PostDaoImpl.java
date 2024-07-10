@@ -15,8 +15,14 @@ public class PostDaoImpl implements PostDao{
 	private SqlSession session;
 	
 	@Override
-	public void insert(PostDto dto) {
-		session.insert("post.insert",dto);	
+	public PostDto insert(PostDto dto) {
+		session.insert("post.insert",dto);
+	   
+	    int num = session.selectOne("post.selectLastInsertedId");
+
+	    PostDto insertedPost = session.selectOne("post.getData", num);
+
+	    return insertedPost;
 	}
 
 	@Override
@@ -29,6 +35,21 @@ public class PostDaoImpl implements PostDao{
 	public PostDto getData(int num) {
 		PostDto dto = session.selectOne("post.getData", num);
 		return dto;
+	}
+	
+	@Override
+	public PostDto delete(int num) {
+		session.delete("post.delete",num);
+		PostDto deletedPost = session.selectOne("post.getData",num);
+		return deletedPost;
+	}
+
+	@Override
+	public PostDto update(PostDto dto) {
+		session.update("post.update",dto);
+		int num = dto.getId();
+		PostDto updatedPost = session.selectOne("post.getData",num);
+		return updatedPost;
 	}
 
 }
