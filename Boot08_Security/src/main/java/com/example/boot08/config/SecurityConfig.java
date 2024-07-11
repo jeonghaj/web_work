@@ -73,6 +73,7 @@ public class SecurityConfig {
 		return new BCryptPasswordEncoder();
 	}
 	
+	//3.0 버전 이후에는 필요없음
 	//인증 매니저 객체를 bean 으로 만든다. (Spring Security 가 자동 로그인 처리할때도 사용되는 객체)
 	@Bean
 	AuthenticationManager authenticationManager(HttpSecurity http,
