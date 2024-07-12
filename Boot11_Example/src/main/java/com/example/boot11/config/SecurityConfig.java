@@ -18,7 +18,7 @@ public class SecurityConfig {
 	public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception{
 		// 로그인요구를 예외로 할 페이지 ( home, 로그인이 필요없는 페이지, 자발적 로그인 폼)
 		String [] whiteList= {"/","/user/loginform","/user/login_fail","/user/expired",
-				"/user/signup_form","/user/signup", "/error"}; 
+				"/user/signup_form","/user/signup", "/error","/upload/images/*"}; 
 		//.csrf / .formLogin / .formLogout => Customizer type 반환
 		httpSecurity
 		.csrf(csrf->csrf.disable())

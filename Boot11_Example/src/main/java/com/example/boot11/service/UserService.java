@@ -7,6 +7,6 @@ import com.example.boot11.dto.UserDto;
 public interface UserService {
 	public void addUser (UserDto dto);
 	public void getInfo (Model model);
-	public void updatedUser(UserDto dto);
-	public void updatedPassword(UserDto dto);
+	public void updateUser(UserDto dto);
+	public void updatePassword(UserDto dto);
 }

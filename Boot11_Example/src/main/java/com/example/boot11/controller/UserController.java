@@ -17,10 +17,26 @@ public class UserController {
 	
 	@Autowired private UserService service;
 	
-	@GetMapping("/user/pwd_update")
+	@PostMapping("/user/update")
+	public String updateUser(UserDto dto) {
+		service.updateUser(dto);
+		//개인정보 보기로 다시 리다일렉트 
+		return "redirect:/user/info";
+	}
+	
+	
+	@GetMapping("/user/updateform")
+	public String updateForm(Model model) {
+		//Model 에 userDto 가 담기도록 서비스 메소드에 전달한다.
+		service.getInfo(model);
+		
+		return "user/updateform";
+	}
+	
+	@PostMapping("/user/pwd_update")
 	public String pwdUpdate(UserDto dto, HttpSession session) {
 		//비밀번호 수정 이후
-		service.updatedPassword(dto);
+		service.updatePassword(dto);
 		//강제 로그아웃 처리
 		session.invalidate();
 		return "user/pwd_update";

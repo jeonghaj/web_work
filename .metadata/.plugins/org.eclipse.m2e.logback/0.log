@@ -6331,3 +6331,542 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact org.webjars:s
 2024-07-11 17:31:37,802 [Worker-223: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
 2024-07-11 17:31:37,807 [Worker-223: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 12 resources from src\main\resources to target\classes
 2024-07-11 17:31:37,811 [Worker-223: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-11 18:13:58,655 [Worker-230: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-11 18:13:58,670 [Worker-230: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 12 resources from src\main\resources to target\classes
+2024-07-11 18:13:58,673 [Worker-230: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 09:33:07,257 [Worker-6: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2024-07-12 10:49:32,063 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-starter-parent/3.2.8-SNAPSHOT/maven-metadata.xml
+2024-07-12 10:49:32,075 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-starter-parent/3.2.8-SNAPSHOT/maven-metadata.xml
+2024-07-12 10:49:32,301 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-starter-parent/3.2.8-SNAPSHOT/spring-boot-starter-parent-3.2.8-20240711.132917-31.pom
+2024-07-12 10:49:32,312 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-starter-parent/3.2.8-SNAPSHOT/spring-boot-starter-parent-3.2.8-20240711.132917-31.pom
+2024-07-12 10:49:32,537 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-dependencies/3.2.8-SNAPSHOT/maven-metadata.xml
+2024-07-12 10:49:32,538 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-dependencies/3.2.8-SNAPSHOT/maven-metadata.xml
+2024-07-12 10:49:32,760 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-dependencies/3.2.8-SNAPSHOT/spring-boot-dependencies-3.2.8-20240711.132917-31.pom
+2024-07-12 10:49:33,179 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-dependencies/3.2.8-SNAPSHOT/spring-boot-dependencies-3.2.8-20240711.132917-31.pom
+2024-07-12 10:49:33,489 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.spring.io/snapshot/org/springframework/data/spring-data-bom/2023.1.8-SNAPSHOT/maven-metadata.xml
+2024-07-12 10:49:33,494 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/snapshot/org/springframework/data/spring-data-bom/2023.1.8-SNAPSHOT/maven-metadata.xml
+2024-07-12 10:49:33,714 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.spring.io/snapshot/org/springframework/data/spring-data-bom/2023.1.8-SNAPSHOT/spring-data-bom-2023.1.8-20240711.140341-254.pom
+2024-07-12 10:49:33,718 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/snapshot/org/springframework/data/spring-data-bom/2023.1.8-SNAPSHOT/spring-data-bom-2023.1.8-20240711.140341-254.pom
+2024-07-12 10:49:33,943 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.spring.io/snapshot/org/springframework/spring-framework-bom/6.1.11-SNAPSHOT/maven-metadata.xml
+2024-07-12 10:49:33,946 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/snapshot/org/springframework/spring-framework-bom/6.1.11-SNAPSHOT/maven-metadata.xml
+2024-07-12 10:49:34,169 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.spring.io/snapshot/org/springframework/integration/spring-integration-bom/6.2.7-SNAPSHOT/maven-metadata.xml
+2024-07-12 10:49:34,171 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/snapshot/org/springframework/integration/spring-integration-bom/6.2.7-SNAPSHOT/maven-metadata.xml
+2024-07-12 10:49:34,390 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.spring.io/snapshot/org/springframework/integration/spring-integration-bom/6.2.7-SNAPSHOT/spring-integration-bom-6.2.7-20240711.185045-10.pom
+2024-07-12 10:49:34,399 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/snapshot/org/springframework/integration/spring-integration-bom/6.2.7-SNAPSHOT/spring-integration-bom-6.2.7-20240711.185045-10.pom
+2024-07-12 10:49:34,749 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-starter-security/3.2.8-SNAPSHOT/maven-metadata.xml
+2024-07-12 10:49:34,756 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-starter-security/3.2.8-SNAPSHOT/maven-metadata.xml
+2024-07-12 10:49:34,976 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-starter-security/3.2.8-SNAPSHOT/spring-boot-starter-security-3.2.8-20240711.132917-31.pom
+2024-07-12 10:49:34,987 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-starter-security/3.2.8-SNAPSHOT/spring-boot-starter-security-3.2.8-20240711.132917-31.pom
+2024-07-12 10:49:35,217 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-starter/3.2.8-SNAPSHOT/maven-metadata.xml
+2024-07-12 10:49:35,220 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-starter/3.2.8-SNAPSHOT/maven-metadata.xml
+2024-07-12 10:49:35,440 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-starter/3.2.8-SNAPSHOT/spring-boot-starter-3.2.8-20240711.132917-31.pom
+2024-07-12 10:49:35,445 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-starter/3.2.8-SNAPSHOT/spring-boot-starter-3.2.8-20240711.132917-31.pom
+2024-07-12 10:49:35,671 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.spring.io/snapshot/org/springframework/boot/spring-boot/3.2.8-SNAPSHOT/maven-metadata.xml
+2024-07-12 10:49:35,673 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/snapshot/org/springframework/boot/spring-boot/3.2.8-SNAPSHOT/maven-metadata.xml
+2024-07-12 10:49:35,895 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.spring.io/snapshot/org/springframework/boot/spring-boot/3.2.8-SNAPSHOT/spring-boot-3.2.8-20240711.132917-31.pom
+2024-07-12 10:49:35,903 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/snapshot/org/springframework/boot/spring-boot/3.2.8-SNAPSHOT/spring-boot-3.2.8-20240711.132917-31.pom
+2024-07-12 10:49:36,128 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.spring.io/snapshot/org/springframework/spring-core/6.1.11-SNAPSHOT/maven-metadata.xml
+2024-07-12 10:49:36,134 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/snapshot/org/springframework/spring-core/6.1.11-SNAPSHOT/maven-metadata.xml
+2024-07-12 10:49:36,362 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.spring.io/snapshot/org/springframework/spring-jcl/6.1.11-SNAPSHOT/maven-metadata.xml
+2024-07-12 10:49:36,364 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/snapshot/org/springframework/spring-jcl/6.1.11-SNAPSHOT/maven-metadata.xml
+2024-07-12 10:49:36,588 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.spring.io/snapshot/org/springframework/spring-context/6.1.11-SNAPSHOT/maven-metadata.xml
+2024-07-12 10:49:36,593 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/snapshot/org/springframework/spring-context/6.1.11-SNAPSHOT/maven-metadata.xml
+2024-07-12 10:49:36,815 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.spring.io/snapshot/org/springframework/spring-aop/6.1.11-SNAPSHOT/maven-metadata.xml
+2024-07-12 10:49:36,817 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/snapshot/org/springframework/spring-aop/6.1.11-SNAPSHOT/maven-metadata.xml
+2024-07-12 10:49:37,039 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.spring.io/snapshot/org/springframework/spring-beans/6.1.11-SNAPSHOT/maven-metadata.xml
+2024-07-12 10:49:37,043 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/snapshot/org/springframework/spring-beans/6.1.11-SNAPSHOT/maven-metadata.xml
+2024-07-12 10:49:37,264 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.spring.io/snapshot/org/springframework/spring-expression/6.1.11-SNAPSHOT/maven-metadata.xml
+2024-07-12 10:49:37,269 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/snapshot/org/springframework/spring-expression/6.1.11-SNAPSHOT/maven-metadata.xml
+2024-07-12 10:49:37,496 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-autoconfigure/3.2.8-SNAPSHOT/maven-metadata.xml
+2024-07-12 10:49:37,500 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-autoconfigure/3.2.8-SNAPSHOT/maven-metadata.xml
+2024-07-12 10:49:37,719 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-autoconfigure/3.2.8-SNAPSHOT/spring-boot-autoconfigure-3.2.8-20240711.132917-31.pom
+2024-07-12 10:49:37,726 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-autoconfigure/3.2.8-SNAPSHOT/spring-boot-autoconfigure-3.2.8-20240711.132917-31.pom
+2024-07-12 10:49:37,949 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-starter-logging/3.2.8-SNAPSHOT/maven-metadata.xml
+2024-07-12 10:49:37,956 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-starter-logging/3.2.8-SNAPSHOT/maven-metadata.xml
+2024-07-12 10:49:38,177 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-starter-logging/3.2.8-SNAPSHOT/spring-boot-starter-logging-3.2.8-20240711.132917-31.pom
+2024-07-12 10:49:38,183 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-starter-logging/3.2.8-SNAPSHOT/spring-boot-starter-logging-3.2.8-20240711.132917-31.pom
+2024-07-12 10:49:38,469 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.spring.io/snapshot/org/springframework/spring-web/6.1.11-SNAPSHOT/maven-metadata.xml
+2024-07-12 10:49:38,474 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/snapshot/org/springframework/spring-web/6.1.11-SNAPSHOT/maven-metadata.xml
+2024-07-12 10:49:38,701 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-starter-thymeleaf/3.2.8-SNAPSHOT/maven-metadata.xml
+2024-07-12 10:49:38,704 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-starter-thymeleaf/3.2.8-SNAPSHOT/maven-metadata.xml
+2024-07-12 10:49:38,929 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-starter-thymeleaf/3.2.8-SNAPSHOT/spring-boot-starter-thymeleaf-3.2.8-20240711.132917-31.pom
+2024-07-12 10:49:38,935 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-starter-thymeleaf/3.2.8-SNAPSHOT/spring-boot-starter-thymeleaf-3.2.8-20240711.132917-31.pom
+2024-07-12 10:49:39,176 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-starter-web/3.2.8-SNAPSHOT/maven-metadata.xml
+2024-07-12 10:49:39,180 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-starter-web/3.2.8-SNAPSHOT/maven-metadata.xml
+2024-07-12 10:49:39,397 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-starter-web/3.2.8-SNAPSHOT/spring-boot-starter-web-3.2.8-20240711.132917-31.pom
+2024-07-12 10:49:39,399 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-starter-web/3.2.8-SNAPSHOT/spring-boot-starter-web-3.2.8-20240711.132917-31.pom
+2024-07-12 10:49:39,622 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-starter-json/3.2.8-SNAPSHOT/maven-metadata.xml
+2024-07-12 10:49:39,626 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-starter-json/3.2.8-SNAPSHOT/maven-metadata.xml
+2024-07-12 10:49:39,845 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-starter-json/3.2.8-SNAPSHOT/spring-boot-starter-json-3.2.8-20240711.132917-31.pom
+2024-07-12 10:49:39,848 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-starter-json/3.2.8-SNAPSHOT/spring-boot-starter-json-3.2.8-20240711.132917-31.pom
+2024-07-12 10:49:40,088 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-starter-tomcat/3.2.8-SNAPSHOT/maven-metadata.xml
+2024-07-12 10:49:40,092 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-starter-tomcat/3.2.8-SNAPSHOT/maven-metadata.xml
+2024-07-12 10:49:40,312 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-starter-tomcat/3.2.8-SNAPSHOT/spring-boot-starter-tomcat-3.2.8-20240711.132917-31.pom
+2024-07-12 10:49:40,319 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-starter-tomcat/3.2.8-SNAPSHOT/spring-boot-starter-tomcat-3.2.8-20240711.132917-31.pom
+2024-07-12 10:49:40,546 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.spring.io/snapshot/org/springframework/spring-webmvc/6.1.11-SNAPSHOT/maven-metadata.xml
+2024-07-12 10:49:40,550 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/snapshot/org/springframework/spring-webmvc/6.1.11-SNAPSHOT/maven-metadata.xml
+2024-07-12 10:49:40,836 [DefaultMetadataResolver-0-0] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-starter-jdbc/3.2.8-SNAPSHOT/maven-metadata.xml
+2024-07-12 10:49:40,838 [DefaultMetadataResolver-0-0] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-starter-jdbc/3.2.8-SNAPSHOT/maven-metadata.xml
+2024-07-12 10:49:41,400 [DefaultMetadataResolver-0-2] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-starter-jdbc/3.2.8-SNAPSHOT/maven-metadata.xml
+2024-07-12 10:49:41,405 [DefaultMetadataResolver-0-2] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-starter-jdbc/3.2.8-SNAPSHOT/maven-metadata.xml
+2024-07-12 10:49:41,425 [DefaultMetadataResolver-0-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://oss.sonatype.org/content/repositories/snapshots/org/springframework/boot/spring-boot-starter-jdbc/3.2.8-SNAPSHOT/maven-metadata.xml
+2024-07-12 10:49:41,626 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-starter-jdbc/3.2.8-SNAPSHOT/spring-boot-starter-jdbc-3.2.8-20240711.132917-31.pom
+2024-07-12 10:49:41,632 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-starter-jdbc/3.2.8-SNAPSHOT/spring-boot-starter-jdbc-3.2.8-20240711.132917-31.pom
+2024-07-12 10:49:41,838 [DefaultMetadataResolver-1-2] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.spring.io/snapshot/org/springframework/spring-jdbc/6.1.11-SNAPSHOT/maven-metadata.xml
+2024-07-12 10:49:41,839 [DefaultMetadataResolver-1-2] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/snapshot/org/springframework/spring-jdbc/6.1.11-SNAPSHOT/maven-metadata.xml
+2024-07-12 10:49:41,841 [DefaultMetadataResolver-1-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://oss.sonatype.org/content/repositories/snapshots/org/springframework/spring-jdbc/6.1.11-SNAPSHOT/maven-metadata.xml
+2024-07-12 10:49:41,864 [DefaultMetadataResolver-1-0] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.spring.io/snapshot/org/springframework/spring-jdbc/6.1.11-SNAPSHOT/maven-metadata.xml
+2024-07-12 10:49:41,869 [DefaultMetadataResolver-1-0] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/snapshot/org/springframework/spring-jdbc/6.1.11-SNAPSHOT/maven-metadata.xml
+2024-07-12 10:49:42,077 [DefaultMetadataResolver-2-0] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.spring.io/snapshot/org/springframework/spring-tx/6.1.11-SNAPSHOT/maven-metadata.xml
+2024-07-12 10:49:42,079 [DefaultMetadataResolver-2-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://oss.sonatype.org/content/repositories/snapshots/org/springframework/spring-tx/6.1.11-SNAPSHOT/maven-metadata.xml
+2024-07-12 10:49:42,080 [DefaultMetadataResolver-2-0] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/snapshot/org/springframework/spring-tx/6.1.11-SNAPSHOT/maven-metadata.xml
+2024-07-12 10:49:42,097 [DefaultMetadataResolver-2-2] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.spring.io/snapshot/org/springframework/spring-tx/6.1.11-SNAPSHOT/maven-metadata.xml
+2024-07-12 10:49:42,099 [DefaultMetadataResolver-2-2] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/snapshot/org/springframework/spring-tx/6.1.11-SNAPSHOT/maven-metadata.xml
+2024-07-12 10:49:42,338 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-devtools/3.2.8-SNAPSHOT/maven-metadata.xml
+2024-07-12 10:49:42,341 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-devtools/3.2.8-SNAPSHOT/maven-metadata.xml
+2024-07-12 10:49:42,560 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-devtools/3.2.8-SNAPSHOT/spring-boot-devtools-3.2.8-20240711.132917-31.pom
+2024-07-12 10:49:42,563 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-devtools/3.2.8-SNAPSHOT/spring-boot-devtools-3.2.8-20240711.132917-31.pom
+2024-07-12 10:49:42,789 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-starter-test/3.2.8-SNAPSHOT/maven-metadata.xml
+2024-07-12 10:49:42,793 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-starter-test/3.2.8-SNAPSHOT/maven-metadata.xml
+2024-07-12 10:49:43,013 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-starter-test/3.2.8-SNAPSHOT/spring-boot-starter-test-3.2.8-20240711.132917-31.pom
+2024-07-12 10:49:43,019 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-starter-test/3.2.8-SNAPSHOT/spring-boot-starter-test-3.2.8-20240711.132917-31.pom
+2024-07-12 10:49:43,245 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-test/3.2.8-SNAPSHOT/maven-metadata.xml
+2024-07-12 10:49:43,252 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-test/3.2.8-SNAPSHOT/maven-metadata.xml
+2024-07-12 10:49:43,473 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-test/3.2.8-SNAPSHOT/spring-boot-test-3.2.8-20240711.132917-31.pom
+2024-07-12 10:49:43,475 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-test/3.2.8-SNAPSHOT/spring-boot-test-3.2.8-20240711.132917-31.pom
+2024-07-12 10:49:43,701 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-test-autoconfigure/3.2.8-SNAPSHOT/maven-metadata.xml
+2024-07-12 10:49:43,707 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-test-autoconfigure/3.2.8-SNAPSHOT/maven-metadata.xml
+2024-07-12 10:49:43,928 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-test-autoconfigure/3.2.8-SNAPSHOT/spring-boot-test-autoconfigure-3.2.8-20240711.132917-31.pom
+2024-07-12 10:49:43,931 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-test-autoconfigure/3.2.8-SNAPSHOT/spring-boot-test-autoconfigure-3.2.8-20240711.132917-31.pom
+2024-07-12 10:49:44,190 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.spring.io/snapshot/org/springframework/spring-test/6.1.11-SNAPSHOT/maven-metadata.xml
+2024-07-12 10:49:44,194 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/snapshot/org/springframework/spring-test/6.1.11-SNAPSHOT/maven-metadata.xml
+2024-07-12 10:49:44,474 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-starter-security/3.2.8-SNAPSHOT/spring-boot-starter-security-3.2.8-20240711.132917-31.jar
+2024-07-12 10:49:44,482 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-starter-security/3.2.8-SNAPSHOT/spring-boot-starter-security-3.2.8-20240711.132917-31.jar
+2024-07-12 10:49:44,679 [BasicRepositoryConnector-repo.spring.io-3-3] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-starter-web/3.2.8-SNAPSHOT/spring-boot-starter-web-3.2.8-20240711.132917-31.jar
+2024-07-12 10:49:44,682 [BasicRepositoryConnector-repo.spring.io-3-3] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-starter-web/3.2.8-SNAPSHOT/spring-boot-starter-web-3.2.8-20240711.132917-31.jar
+2024-07-12 10:49:44,698 [BasicRepositoryConnector-repo.spring.io-3-0] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-starter/3.2.8-SNAPSHOT/spring-boot-starter-3.2.8-20240711.132917-31.jar
+2024-07-12 10:49:44,701 [BasicRepositoryConnector-repo.spring.io-3-0] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-starter/3.2.8-SNAPSHOT/spring-boot-starter-3.2.8-20240711.132917-31.jar
+2024-07-12 10:49:44,877 [BasicRepositoryConnector-repo.spring.io-3-3] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-starter-tomcat/3.2.8-SNAPSHOT/spring-boot-starter-tomcat-3.2.8-20240711.132917-31.jar
+2024-07-12 10:49:44,881 [BasicRepositoryConnector-repo.spring.io-3-3] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-starter-tomcat/3.2.8-SNAPSHOT/spring-boot-starter-tomcat-3.2.8-20240711.132917-31.jar
+2024-07-12 10:49:44,917 [BasicRepositoryConnector-repo.spring.io-3-0] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-starter-jdbc/3.2.8-SNAPSHOT/spring-boot-starter-jdbc-3.2.8-20240711.132917-31.jar
+2024-07-12 10:49:44,923 [BasicRepositoryConnector-repo.spring.io-3-0] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-starter-jdbc/3.2.8-SNAPSHOT/spring-boot-starter-jdbc-3.2.8-20240711.132917-31.jar
+2024-07-12 10:49:45,074 [BasicRepositoryConnector-repo.spring.io-3-3] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-devtools/3.2.8-SNAPSHOT/spring-boot-devtools-3.2.8-20240711.132917-31.jar
+2024-07-12 10:49:45,265 [BasicRepositoryConnector-repo.spring.io-3-2] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-starter-thymeleaf/3.2.8-SNAPSHOT/spring-boot-starter-thymeleaf-3.2.8-20240711.132917-31.jar
+2024-07-12 10:49:45,270 [BasicRepositoryConnector-repo.spring.io-3-2] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-starter-thymeleaf/3.2.8-SNAPSHOT/spring-boot-starter-thymeleaf-3.2.8-20240711.132917-31.jar
+2024-07-12 10:49:45,286 [BasicRepositoryConnector-repo.spring.io-3-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-starter-logging/3.2.8-SNAPSHOT/spring-boot-starter-logging-3.2.8-20240711.132917-31.jar
+2024-07-12 10:49:45,290 [BasicRepositoryConnector-repo.spring.io-3-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-starter-logging/3.2.8-SNAPSHOT/spring-boot-starter-logging-3.2.8-20240711.132917-31.jar
+2024-07-12 10:49:45,298 [BasicRepositoryConnector-repo.spring.io-3-4] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-starter-json/3.2.8-SNAPSHOT/spring-boot-starter-json-3.2.8-20240711.132917-31.jar
+2024-07-12 10:49:45,300 [BasicRepositoryConnector-repo.spring.io-3-4] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-starter-json/3.2.8-SNAPSHOT/spring-boot-starter-json-3.2.8-20240711.132917-31.jar
+2024-07-12 10:49:45,495 [BasicRepositoryConnector-repo.spring.io-3-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-starter-test/3.2.8-SNAPSHOT/spring-boot-starter-test-3.2.8-20240711.132917-31.jar
+2024-07-12 10:49:45,497 [BasicRepositoryConnector-repo.spring.io-3-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-starter-test/3.2.8-SNAPSHOT/spring-boot-starter-test-3.2.8-20240711.132917-31.jar
+2024-07-12 10:49:45,647 [BasicRepositoryConnector-repo.spring.io-3-3] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-devtools/3.2.8-SNAPSHOT/spring-boot-devtools-3.2.8-20240711.132917-31.jar
+2024-07-12 10:49:45,879 [BasicRepositoryConnector-repo.spring.io-3-0] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.spring.io/snapshot/org/springframework/boot/spring-boot/3.2.8-SNAPSHOT/spring-boot-3.2.8-20240711.132917-31.jar
+2024-07-12 10:49:46,120 [BasicRepositoryConnector-repo.spring.io-3-2] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-autoconfigure/3.2.8-SNAPSHOT/spring-boot-autoconfigure-3.2.8-20240711.132917-31.jar
+2024-07-12 10:49:46,152 [BasicRepositoryConnector-repo.spring.io-3-4] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-test/3.2.8-SNAPSHOT/spring-boot-test-3.2.8-20240711.132917-31.jar
+2024-07-12 10:49:46,363 [BasicRepositoryConnector-repo.spring.io-3-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-test-autoconfigure/3.2.8-SNAPSHOT/spring-boot-test-autoconfigure-3.2.8-20240711.132917-31.jar
+2024-07-12 10:49:46,949 [BasicRepositoryConnector-repo.spring.io-3-4] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-test/3.2.8-SNAPSHOT/spring-boot-test-3.2.8-20240711.132917-31.jar
+2024-07-12 10:49:47,041 [BasicRepositoryConnector-repo.spring.io-3-0] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/snapshot/org/springframework/boot/spring-boot/3.2.8-SNAPSHOT/spring-boot-3.2.8-20240711.132917-31.jar
+2024-07-12 10:49:47,159 [BasicRepositoryConnector-repo.spring.io-3-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-test-autoconfigure/3.2.8-SNAPSHOT/spring-boot-test-autoconfigure-3.2.8-20240711.132917-31.jar
+2024-07-12 10:49:47,524 [BasicRepositoryConnector-repo.spring.io-3-2] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-autoconfigure/3.2.8-SNAPSHOT/spring-boot-autoconfigure-3.2.8-20240711.132917-31.jar
+2024-07-12 10:49:48,395 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-maven-plugin/3.2.8-SNAPSHOT/maven-metadata.xml
+2024-07-12 10:49:48,400 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-maven-plugin/3.2.8-SNAPSHOT/maven-metadata.xml
+2024-07-12 10:49:48,609 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-maven-plugin/3.2.8-SNAPSHOT/spring-boot-maven-plugin-3.2.8-20240711.132917-31.pom
+2024-07-12 10:49:48,616 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-maven-plugin/3.2.8-SNAPSHOT/spring-boot-maven-plugin-3.2.8-20240711.132917-31.pom
+2024-07-12 10:49:48,826 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-maven-plugin/3.2.8-SNAPSHOT/spring-boot-maven-plugin-3.2.8-20240711.132917-31.jar
+2024-07-12 10:49:49,425 [Worker-50: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-maven-plugin/3.2.8-SNAPSHOT/spring-boot-maven-plugin-3.2.8-20240711.132917-31.jar
+2024-07-12 10:49:49,542 [Worker-50: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 10:49:49,592 [Worker-50: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 12 resources from src\main\resources to target\classes
+2024-07-12 10:49:49,599 [Worker-50: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 10:49:50,567 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 10:49:50,583 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 10:49:50,587 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot00_Test\src\test\resources
+2024-07-12 10:49:51,076 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 10:49:51,094 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-07-12 10:49:51,097 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot01_Bean\src\test\resources
+2024-07-12 10:49:51,525 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 10:49:51,560 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 10:49:51,564 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot02_Controller\src\test\resources
+2024-07-12 10:49:51,920 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 10:49:51,928 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-07-12 10:49:51,932 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot03_Jsp\src\test\resources
+2024-07-12 10:49:52,312 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 10:49:52,324 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 277 resources from src\main\resources to target\classes
+2024-07-12 10:49:52,526 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot04_Thymeleaf\src\test\resources
+2024-07-12 10:49:52,938 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 10:49:52,949 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 9 resources from src\main\resources to target\classes
+2024-07-12 10:49:52,959 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot05_MyBatis\src\test\resources
+2024-07-12 10:49:53,290 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 10:49:53,301 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 4 resources from src\main\resources to target\classes
+2024-07-12 10:49:53,308 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot06_interceptor\src\test\resources
+2024-07-12 10:49:53,702 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 10:49:53,709 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 6 resources from src\main\resources to target\classes
+2024-07-12 10:49:53,715 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot07_FileUpload\src\test\resources
+2024-07-12 10:49:54,182 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 10:49:54,191 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 9 resources from src\main\resources to target\classes
+2024-07-12 10:49:54,201 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot08_Security\src\test\resources
+2024-07-12 10:49:54,536 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 10:49:54,546 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-07-12 10:49:54,548 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot09_AOP\src\test\resources
+2024-07-12 10:49:55,041 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 10:49:55,055 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 3 resources from src\main\resources to target\classes
+2024-07-12 10:49:55,061 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot10_Restful_API\src\test\resources
+2024-07-12 10:49:55,167 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 10:49:55,174 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 12 resources from src\main\resources to target\classes
+2024-07-12 10:49:55,184 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 10:49:55,501 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 10:49:55,516 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-07-12 10:49:55,518 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\HelloBoot\src\test\resources
+2024-07-12 10:49:55,799 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 10:49:55,808 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-07-12 10:49:55,811 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\TestBoot\src\test\resources
+2024-07-12 10:49:56,121 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 10:49:56,137 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 10:49:56,144 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\TestWeb\src\test\resources
+2024-07-12 10:49:58,266 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 10:49:58,282 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 12 resources from src\main\resources to target\classes
+2024-07-12 10:49:58,286 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 10:50:57,115 [Worker-55: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-07-12 10:50:57,117 [Worker-55: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 10:50:57,121 [Worker-55: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 10:52:37,856 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-07-12 10:52:37,859 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 10:52:37,861 [Worker-54: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 10:54:09,788 [Worker-57: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-starter-security/3.2.8-SNAPSHOT/spring-boot-starter-security-3.2.8-20240711.132917-31-sources.jar
+2024-07-12 10:54:09,790 [Worker-57: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-starter-security/3.2.8-SNAPSHOT/spring-boot-starter-security-3.2.8-20240711.132917-31-sources.jar
+2024-07-12 10:54:09,792 [Worker-57: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework.boot:spring-boot-starter-security:3.2.8-SNAPSHOT
+2024-07-12 10:54:10,394 [Worker-57: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-starter/3.2.8-SNAPSHOT/spring-boot-starter-3.2.8-20240711.132917-31-sources.jar
+2024-07-12 10:54:10,397 [Worker-57: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-starter/3.2.8-SNAPSHOT/spring-boot-starter-3.2.8-20240711.132917-31-sources.jar
+2024-07-12 10:54:10,403 [Worker-57: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework.boot:spring-boot-starter:3.2.8-SNAPSHOT
+2024-07-12 10:54:10,992 [Worker-57: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-starter-logging/3.2.8-SNAPSHOT/spring-boot-starter-logging-3.2.8-20240711.132917-31-sources.jar
+2024-07-12 10:54:10,995 [Worker-57: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-starter-logging/3.2.8-SNAPSHOT/spring-boot-starter-logging-3.2.8-20240711.132917-31-sources.jar
+2024-07-12 10:54:10,997 [Worker-57: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework.boot:spring-boot-starter-logging:3.2.8-SNAPSHOT
+2024-07-12 10:54:11,878 [Worker-57: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-starter-thymeleaf/3.2.8-SNAPSHOT/spring-boot-starter-thymeleaf-3.2.8-20240711.132917-31-sources.jar
+2024-07-12 10:54:11,884 [Worker-57: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-starter-thymeleaf/3.2.8-SNAPSHOT/spring-boot-starter-thymeleaf-3.2.8-20240711.132917-31-sources.jar
+2024-07-12 10:54:11,888 [Worker-57: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework.boot:spring-boot-starter-thymeleaf:3.2.8-SNAPSHOT
+2024-07-12 10:54:12,485 [Worker-57: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-starter-web/3.2.8-SNAPSHOT/spring-boot-starter-web-3.2.8-20240711.132917-31-sources.jar
+2024-07-12 10:54:12,493 [Worker-57: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-starter-web/3.2.8-SNAPSHOT/spring-boot-starter-web-3.2.8-20240711.132917-31-sources.jar
+2024-07-12 10:54:12,495 [Worker-57: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework.boot:spring-boot-starter-web:3.2.8-SNAPSHOT
+2024-07-12 10:54:13,290 [Worker-57: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-starter-json/3.2.8-SNAPSHOT/spring-boot-starter-json-3.2.8-20240711.132917-31-sources.jar
+2024-07-12 10:54:13,295 [Worker-57: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-starter-json/3.2.8-SNAPSHOT/spring-boot-starter-json-3.2.8-20240711.132917-31-sources.jar
+2024-07-12 10:54:13,297 [Worker-57: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework.boot:spring-boot-starter-json:3.2.8-SNAPSHOT
+2024-07-12 10:54:14,098 [Worker-57: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-starter-tomcat/3.2.8-SNAPSHOT/spring-boot-starter-tomcat-3.2.8-20240711.132917-31-sources.jar
+2024-07-12 10:54:14,102 [Worker-57: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-starter-tomcat/3.2.8-SNAPSHOT/spring-boot-starter-tomcat-3.2.8-20240711.132917-31-sources.jar
+2024-07-12 10:54:14,104 [Worker-57: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework.boot:spring-boot-starter-tomcat:3.2.8-SNAPSHOT
+2024-07-12 10:54:14,913 [Worker-57: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-starter-jdbc/3.2.8-SNAPSHOT/spring-boot-starter-jdbc-3.2.8-20240711.132917-31-sources.jar
+2024-07-12 10:54:14,916 [Worker-57: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-starter-jdbc/3.2.8-SNAPSHOT/spring-boot-starter-jdbc-3.2.8-20240711.132917-31-sources.jar
+2024-07-12 10:54:14,918 [Worker-57: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework.boot:spring-boot-starter-jdbc:3.2.8-SNAPSHOT
+2024-07-12 10:54:15,725 [Worker-57: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-devtools/3.2.8-SNAPSHOT/spring-boot-devtools-3.2.8-20240711.132917-31-sources.jar
+2024-07-12 10:54:16,313 [Worker-57: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-devtools/3.2.8-SNAPSHOT/spring-boot-devtools-3.2.8-20240711.132917-31-sources.jar
+2024-07-12 10:54:16,316 [Worker-57: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework.boot:spring-boot-devtools:3.2.8-SNAPSHOT
+2024-07-12 10:54:17,544 [Worker-57: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.spring.io/snapshot/org/springframework/boot/spring-boot/3.2.8-SNAPSHOT/spring-boot-3.2.8-20240711.132917-31-sources.jar
+2024-07-12 10:54:18,716 [Worker-57: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/snapshot/org/springframework/boot/spring-boot/3.2.8-SNAPSHOT/spring-boot-3.2.8-20240711.132917-31-sources.jar
+2024-07-12 10:54:18,719 [Worker-57: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework.boot:spring-boot:3.2.8-SNAPSHOT
+2024-07-12 10:54:20,286 [Worker-57: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-autoconfigure/3.2.8-SNAPSHOT/spring-boot-autoconfigure-3.2.8-20240711.132917-31-sources.jar
+2024-07-12 10:54:21,481 [Worker-57: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-autoconfigure/3.2.8-SNAPSHOT/spring-boot-autoconfigure-3.2.8-20240711.132917-31-sources.jar
+2024-07-12 10:54:21,486 [Worker-57: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework.boot:spring-boot-autoconfigure:3.2.8-SNAPSHOT
+2024-07-12 10:54:23,436 [Worker-49: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-starter-test/3.2.8-SNAPSHOT/spring-boot-starter-test-3.2.8-20240711.132917-31-sources.jar
+2024-07-12 10:54:23,444 [Worker-49: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-starter-test/3.2.8-SNAPSHOT/spring-boot-starter-test-3.2.8-20240711.132917-31-sources.jar
+2024-07-12 10:54:23,448 [Worker-49: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework.boot:spring-boot-starter-test:3.2.8-SNAPSHOT
+2024-07-12 10:54:24,253 [Worker-49: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-test/3.2.8-SNAPSHOT/spring-boot-test-3.2.8-20240711.132917-31-sources.jar
+2024-07-12 10:54:24,846 [Worker-49: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-test/3.2.8-SNAPSHOT/spring-boot-test-3.2.8-20240711.132917-31-sources.jar
+2024-07-12 10:54:24,850 [Worker-49: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework.boot:spring-boot-test:3.2.8-SNAPSHOT
+2024-07-12 10:54:26,297 [Worker-49: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-test-autoconfigure/3.2.8-SNAPSHOT/spring-boot-test-autoconfigure-3.2.8-20240711.132917-31-sources.jar
+2024-07-12 10:54:27,084 [Worker-49: Download sources and javadoc] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.spring.io/snapshot/org/springframework/boot/spring-boot-test-autoconfigure/3.2.8-SNAPSHOT/spring-boot-test-autoconfigure-3.2.8-20240711.132917-31-sources.jar
+2024-07-12 10:54:27,089 [Worker-49: Download sources and javadoc] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.springframework.boot:spring-boot-test-autoconfigure:3.2.8-SNAPSHOT
+2024-07-12 10:55:46,531 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 10:55:46,555 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 13 resources from src\main\resources to target\classes
+2024-07-12 10:55:46,559 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 10:55:59,899 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 10:55:59,923 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 13 resources from src\main\resources to target\classes
+2024-07-12 10:55:59,926 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 10:57:50,239 [Worker-57: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 10:57:50,244 [Worker-57: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 13 resources from src\main\resources to target\classes
+2024-07-12 10:57:50,248 [Worker-57: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 11:01:57,877 [Worker-60: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 11:01:57,885 [Worker-60: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 13 resources from src\main\resources to target\classes
+2024-07-12 11:01:57,887 [Worker-60: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 11:06:39,011 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 11:06:39,020 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 13 resources from src\main\resources to target\classes
+2024-07-12 11:06:39,023 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 11:10:25,678 [Worker-69: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 11:10:25,682 [Worker-69: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 13 resources from src\main\resources to target\classes
+2024-07-12 11:10:25,685 [Worker-69: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 11:20:33,791 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 11:20:33,796 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 13 resources from src\main\resources to target\classes
+2024-07-12 11:20:33,798 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 11:20:45,413 [Worker-71: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 11:20:45,417 [Worker-71: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 13 resources from src\main\resources to target\classes
+2024-07-12 11:20:45,420 [Worker-71: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 11:24:04,167 [Worker-75: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-07-12 11:24:04,168 [Worker-75: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 11:24:04,171 [Worker-75: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 11:25:40,455 [Worker-75: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 11:25:40,459 [Worker-75: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 14 resources from src\main\resources to target\classes
+2024-07-12 11:25:40,463 [Worker-75: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 11:29:05,935 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 11:29:05,940 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 14 resources from src\main\resources to target\classes
+2024-07-12 11:29:05,943 [Worker-64: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 12:04:28,059 [Worker-90: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 12:04:28,065 [Worker-90: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 14 resources from src\main\resources to target\classes
+2024-07-12 12:04:28,067 [Worker-90: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 12:04:39,003 [Worker-89: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 12:04:39,008 [Worker-89: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 14 resources from src\main\resources to target\classes
+2024-07-12 12:04:39,011 [Worker-89: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 12:06:45,242 [Worker-88: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-07-12 12:06:45,243 [Worker-88: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 12:06:45,245 [Worker-88: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 12:15:29,803 [Worker-92: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-07-12 12:15:29,804 [Worker-92: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 12:15:29,806 [Worker-92: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 12:41:08,547 [Worker-92: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 12:41:08,560 [Worker-92: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 14 resources from src\main\resources to target\classes
+2024-07-12 12:41:08,562 [Worker-92: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 12:43:11,005 [Worker-92: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-07-12 12:43:11,006 [Worker-92: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 12:43:11,008 [Worker-92: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 12:44:38,027 [Worker-99: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-07-12 12:44:38,029 [Worker-99: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 12:44:38,031 [Worker-99: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 14:53:30,602 [Worker-126: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 14:53:30,611 [Worker-126: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 15 resources from src\main\resources to target\classes
+2024-07-12 14:53:30,614 [Worker-126: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 14:54:08,667 [Worker-119: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 14:54:08,670 [Worker-119: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 15 resources from src\main\resources to target\classes
+2024-07-12 14:54:08,672 [Worker-119: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 14:54:16,157 [Worker-124: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 14:54:16,162 [Worker-124: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 15 resources from src\main\resources to target\classes
+2024-07-12 14:54:16,165 [Worker-124: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 14:56:25,691 [Worker-127: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 14:56:25,697 [Worker-127: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 15 resources from src\main\resources to target\classes
+2024-07-12 14:56:25,700 [Worker-127: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 14:56:37,023 [Worker-128: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 14:56:37,030 [Worker-128: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 15 resources from src\main\resources to target\classes
+2024-07-12 14:56:37,033 [Worker-128: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 15:03:13,332 [Worker-130: Building Workspace] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 15:03:13,347 [Worker-130: Building Workspace] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 16 resources from src\main\resources to target\classes
+2024-07-12 15:03:13,351 [Worker-130: Building Workspace] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 15:03:19,267 [Worker-119: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-07-12 15:03:19,268 [Worker-119: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 15:03:19,270 [Worker-119: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 15:03:21,331 [Worker-119: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-07-12 15:03:21,332 [Worker-119: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 15:03:21,335 [Worker-119: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 15:03:25,427 [Worker-130: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-07-12 15:03:25,428 [Worker-130: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-07-12 15:03:25,430 [Worker-130: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 15:03:41,730 [Worker-124: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-07-12 15:03:41,731 [Worker-124: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 15:03:41,734 [Worker-124: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 15:04:26,110 [Worker-124: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 15:04:26,115 [Worker-124: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 16 resources from src\main\resources to target\classes
+2024-07-12 15:04:26,118 [Worker-124: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 15:12:23,994 [Worker-126: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 15:12:23,999 [Worker-126: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 16 resources from src\main\resources to target\classes
+2024-07-12 15:12:24,001 [Worker-126: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 15:13:19,054 [Worker-133: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 15:13:19,058 [Worker-133: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 16 resources from src\main\resources to target\classes
+2024-07-12 15:13:19,060 [Worker-133: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 15:15:48,916 [Worker-124: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 15:15:48,922 [Worker-124: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 16 resources from src\main\resources to target\classes
+2024-07-12 15:15:48,925 [Worker-124: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 15:17:07,539 [Worker-135: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-07-12 15:17:07,540 [Worker-135: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 15:17:07,542 [Worker-135: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 15:32:55,018 [Worker-138: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 15:32:55,025 [Worker-138: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 16 resources from src\main\resources to target\classes
+2024-07-12 15:32:55,028 [Worker-138: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 15:33:24,356 [Worker-137: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 15:33:24,361 [Worker-137: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 16 resources from src\main\resources to target\classes
+2024-07-12 15:33:24,363 [Worker-137: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 15:33:41,390 [Worker-138: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 15:33:41,394 [Worker-138: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 16 resources from src\main\resources to target\classes
+2024-07-12 15:33:41,396 [Worker-138: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 15:33:58,702 [Worker-139: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 15:33:58,708 [Worker-139: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 16 resources from src\main\resources to target\classes
+2024-07-12 15:33:58,711 [Worker-139: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 15:35:37,402 [Worker-141: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:Boot11_Example:0.0.1-SNAPSHOT @ C:\Users\user\playground\web_work\Boot11_Example\pom.xml.
+2024-07-12 15:35:37,737 [Worker-141: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 15:35:37,744 [Worker-141: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 16 resources from src\main\resources to target\classes
+2024-07-12 15:35:37,747 [Worker-141: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 15:35:38,919 [Worker-140: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 15:35:38,924 [Worker-140: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 16 resources from src\main\resources to target\classes
+2024-07-12 15:35:38,933 [Worker-140: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 15:36:21,381 [Worker-142: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:Boot11_Example:0.0.1-SNAPSHOT @ C:\Users\user\playground\web_work\Boot11_Example\pom.xml.
+2024-07-12 15:36:21,678 [Worker-142: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-07-12 15:36:21,679 [Worker-142: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-07-12 15:36:21,681 [Worker-142: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 15:38:07,080 [Worker-143: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:Boot11_Example:0.0.1-SNAPSHOT @ C:\Users\user\playground\web_work\Boot11_Example\pom.xml.
+2024-07-12 15:38:07,373 [Worker-143: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 15:38:07,384 [Worker-143: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 16 resources from src\main\resources to target\classes
+2024-07-12 15:38:07,388 [Worker-143: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 15:41:01,998 [Worker-139: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 15:41:02,003 [Worker-139: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 16 resources from src\main\resources to target\classes
+2024-07-12 15:41:02,006 [Worker-139: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 15:42:18,943 [Worker-137: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 15:42:18,953 [Worker-137: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 16 resources from src\main\resources to target\classes
+2024-07-12 15:42:18,957 [Worker-137: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 15:44:17,012 [Worker-137: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-07-12 15:44:17,013 [Worker-137: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 15:44:17,014 [Worker-137: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot07_FileUpload\src\test\resources
+2024-07-12 15:46:27,274 [Worker-144: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-07-12 15:46:27,275 [Worker-144: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 15:46:27,277 [Worker-144: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 15:55:26,424 [Worker-150: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 15:55:26,429 [Worker-150: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 16 resources from src\main\resources to target\classes
+2024-07-12 15:55:26,432 [Worker-150: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 15:56:05,614 [Worker-149: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-07-12 15:56:05,615 [Worker-149: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 15:56:05,617 [Worker-149: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 15:57:46,796 [Worker-149: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-07-12 15:57:46,798 [Worker-149: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 15:57:46,800 [Worker-149: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 15:57:58,668 [Worker-145: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-07-12 15:57:58,669 [Worker-145: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 15:57:58,672 [Worker-145: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 15:59:06,526 [Worker-150: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 15:59:06,530 [Worker-150: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 16 resources from src\main\resources to target\classes
+2024-07-12 15:59:06,533 [Worker-150: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 16:16:23,431 [Worker-155: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 16:16:23,436 [Worker-155: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 16 resources from src\main\resources to target\classes
+2024-07-12 16:16:23,440 [Worker-155: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 16:16:48,914 [Worker-155: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 16:16:48,921 [Worker-155: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 16 resources from src\main\resources to target\classes
+2024-07-12 16:16:48,924 [Worker-155: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 16:17:38,124 [Worker-152: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 16:17:38,130 [Worker-152: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 16 resources from src\main\resources to target\classes
+2024-07-12 16:17:38,133 [Worker-152: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 16:18:55,865 [Worker-157: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-07-12 16:18:55,866 [Worker-157: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 16:18:55,869 [Worker-157: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 16:19:13,897 [Worker-155: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 16:19:13,901 [Worker-155: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 17 resources from src\main\resources to target\classes
+2024-07-12 16:19:13,905 [Worker-155: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 16:19:29,387 [Worker-157: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 16:19:29,391 [Worker-157: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 17 resources from src\main\resources to target\classes
+2024-07-12 16:19:29,395 [Worker-157: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 16:19:41,850 [Worker-152: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 16:19:41,855 [Worker-152: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 17 resources from src\main\resources to target\classes
+2024-07-12 16:19:41,858 [Worker-152: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 16:20:01,006 [Worker-141: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 16:20:01,010 [Worker-141: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 17 resources from src\main\resources to target\classes
+2024-07-12 16:20:01,013 [Worker-141: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 16:20:10,573 [Worker-154: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 16:20:10,577 [Worker-154: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 17 resources from src\main\resources to target\classes
+2024-07-12 16:20:10,580 [Worker-154: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 16:20:24,500 [Worker-152: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 16:20:24,504 [Worker-152: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 17 resources from src\main\resources to target\classes
+2024-07-12 16:20:24,507 [Worker-152: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 16:20:58,276 [Worker-154: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 16:20:58,279 [Worker-154: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 17 resources from src\main\resources to target\classes
+2024-07-12 16:20:58,283 [Worker-154: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 16:21:06,393 [Worker-154: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 16:21:06,397 [Worker-154: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 17 resources from src\main\resources to target\classes
+2024-07-12 16:21:06,399 [Worker-154: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 16:21:16,640 [Worker-157: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 16:21:16,644 [Worker-157: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 17 resources from src\main\resources to target\classes
+2024-07-12 16:21:16,647 [Worker-157: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 16:21:26,889 [Worker-157: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 16:21:26,893 [Worker-157: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 17 resources from src\main\resources to target\classes
+2024-07-12 16:21:26,895 [Worker-157: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 16:21:39,170 [Worker-154: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 16:21:39,174 [Worker-154: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 17 resources from src\main\resources to target\classes
+2024-07-12 16:21:39,176 [Worker-154: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 16:21:57,059 [Worker-152: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 16:21:57,063 [Worker-152: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 17 resources from src\main\resources to target\classes
+2024-07-12 16:21:57,066 [Worker-152: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 16:22:58,151 [Worker-158: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 16:22:58,155 [Worker-158: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 17 resources from src\main\resources to target\classes
+2024-07-12 16:22:58,157 [Worker-158: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 16:26:10,073 [Worker-160: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 16:26:10,077 [Worker-160: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 17 resources from src\main\resources to target\classes
+2024-07-12 16:26:10,080 [Worker-160: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 16:28:40,853 [Worker-159: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-07-12 16:28:40,854 [Worker-159: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 16:28:40,856 [Worker-159: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 16:28:45,884 [Worker-162: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-07-12 16:28:45,885 [Worker-162: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 16:28:45,887 [Worker-162: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 16:30:27,115 [Worker-159: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-07-12 16:30:27,116 [Worker-159: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 16:30:27,118 [Worker-159: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 16:32:11,440 [Worker-160: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 16:32:11,445 [Worker-160: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 18 resources from src\main\resources to target\classes
+2024-07-12 16:32:11,448 [Worker-160: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 16:32:53,751 [Worker-159: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 16:32:53,757 [Worker-159: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 18 resources from src\main\resources to target\classes
+2024-07-12 16:32:53,760 [Worker-159: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 16:33:48,195 [Worker-162: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 16:33:48,201 [Worker-162: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 18 resources from src\main\resources to target\classes
+2024-07-12 16:33:48,204 [Worker-162: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 16:33:58,413 [Worker-159: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 16:33:58,417 [Worker-159: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 18 resources from src\main\resources to target\classes
+2024-07-12 16:33:58,419 [Worker-159: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 16:45:43,983 [Worker-166: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 16:45:43,993 [Worker-166: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 18 resources from src\main\resources to target\classes
+2024-07-12 16:45:43,996 [Worker-166: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 16:46:06,984 [Worker-165: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-07-12 16:46:06,985 [Worker-165: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 16:46:06,987 [Worker-165: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 16:48:55,755 [Worker-166: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 16:48:55,760 [Worker-166: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 19 resources from src\main\resources to target\classes
+2024-07-12 16:48:55,763 [Worker-166: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 16:49:29,587 [Worker-166: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 16:49:29,597 [Worker-166: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 19 resources from src\main\resources to target\classes
+2024-07-12 16:49:29,600 [Worker-166: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 16:49:47,177 [Worker-164: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 16:49:47,188 [Worker-164: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 19 resources from src\main\resources to target\classes
+2024-07-12 16:49:47,191 [Worker-164: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 16:50:44,262 [Worker-168: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 16:50:44,267 [Worker-168: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 19 resources from src\main\resources to target\classes
+2024-07-12 16:50:44,270 [Worker-168: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 16:54:04,831 [Worker-165: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 16:54:04,836 [Worker-165: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 19 resources from src\main\resources to target\classes
+2024-07-12 16:54:04,840 [Worker-165: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 16:58:04,150 [Worker-168: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 16:58:04,155 [Worker-168: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 19 resources from src\main\resources to target\classes
+2024-07-12 16:58:04,159 [Worker-168: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 16:59:06,013 [Worker-166: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-07-12 16:59:06,014 [Worker-166: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 16:59:06,016 [Worker-166: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 16:59:44,490 [Worker-164: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-07-12 16:59:44,491 [Worker-164: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 16:59:44,493 [Worker-164: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 17:01:38,639 [Worker-169: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 17:01:38,643 [Worker-169: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 19 resources from src\main\resources to target\classes
+2024-07-12 17:01:38,647 [Worker-169: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 17:02:05,249 [Worker-171: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 17:02:05,252 [Worker-171: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 19 resources from src\main\resources to target\classes
+2024-07-12 17:02:05,255 [Worker-171: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 17:02:13,515 [Worker-165: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 17:02:13,520 [Worker-165: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 19 resources from src\main\resources to target\classes
+2024-07-12 17:02:13,523 [Worker-165: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 17:15:52,027 [Worker-177: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 17:15:52,032 [Worker-177: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 19 resources from src\main\resources to target\classes
+2024-07-12 17:15:52,035 [Worker-177: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 17:16:28,676 [Worker-179: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 17:16:28,687 [Worker-179: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 19 resources from src\main\resources to target\classes
+2024-07-12 17:16:28,693 [Worker-179: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 17:17:22,880 [Worker-175: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 17:17:22,890 [Worker-175: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 19 resources from src\main\resources to target\classes
+2024-07-12 17:17:22,894 [Worker-175: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 17:44:14,241 [Worker-179: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 17:44:14,250 [Worker-179: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 19 resources from src\main\resources to target\classes
+2024-07-12 17:44:14,253 [Worker-179: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 18:05:21,573 [Worker-189: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 18:05:21,579 [Worker-189: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 19 resources from src\main\resources to target\classes
+2024-07-12 18:05:21,582 [Worker-189: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 18:06:52,812 [Worker-192: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-07-12 18:06:52,813 [Worker-192: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 18:06:52,815 [Worker-192: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 18:07:46,052 [Worker-193: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-07-12 18:07:46,053 [Worker-193: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 18:07:46,055 [Worker-193: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 18:09:09,388 [Worker-192: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-07-12 18:09:09,389 [Worker-192: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 18:09:09,391 [Worker-192: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 18:10:19,054 [Worker-189: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-07-12 18:10:19,055 [Worker-189: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 18:10:19,058 [Worker-189: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources
+2024-07-12 18:13:46,015 [Worker-192: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2024-07-12 18:13:46,017 [Worker-192: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2024-07-12 18:13:46,019 [Worker-192: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\user\playground\web_work\Boot11_Example\src\test\resources

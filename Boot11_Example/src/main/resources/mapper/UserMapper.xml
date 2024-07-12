@@ -2,6 +2,12 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="user">
 	
+	<update id="update" parameterType="com.example.boot11.dto.UserDto">
+		update user_tbl
+		set email=#{email} <if test="profile != null">,profile=#{profile}</if>
+		where userName=#{userName}
+	</update>
+	
 	<update id="updatePwd" parameterType="com.example.boot11.dto.UserDto">
 		update user_tbl
 		set password=#{newPassword}
