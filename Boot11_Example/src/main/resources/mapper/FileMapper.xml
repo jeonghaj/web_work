@@ -1,10 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="file">
+
+	<sql id="column">
+		num, writer, title, orgFileName, saveFileName, FileSize, regdate
+	</sql>
+	<!-- rownum 에서 가장 큰 숫자를 찾아서 반환
+		 rownum이 null 인경우 오류가 발생할 수 있기때문에 nvl을 이용해서 0 이라는 숫자를 기본으로 설정
+		 nvl( 칼럼, 숫자 )
+	  -->
+	<select id="getCount" resultType="int">
+		select nvl(max(rownum),0)
+		from board_file
+	</select>
 	
-	<insert id="upload" parameterType="com.example.boot11.dto.FileDto">
+	<insert id="insert" parameterType="fileDto">
 		insert into board_file
-		(num, writer, title, orgFileName, saveFileName, fileSize, regdate)
+		(<include refid="column"/>)
 		values(board_file_seq.nextval,#{writer},#{title},#{orgFileName}, #{saveFileName}, #{fileSize}, sysdate)
 	</insert>
+	
+	<select id="getData" resultType="fileDto" parameterType="int">
+		select <include refid="column"/>
+		from board_file
+		where num = #{num}
+	</select>
+	
+	<delete id="delete" parameterType="int">
+		delete from board_file
+		where num = #{num}
+	</delete>
+
+	<select id="getList" resultType="fileDto">
+		select num, writer, title, orgFileName, regdate
+		from board_file
+		order by num desc
+	</select>
+	
 </mapper>

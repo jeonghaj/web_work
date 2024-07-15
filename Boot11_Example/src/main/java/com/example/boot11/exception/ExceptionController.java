@@ -36,4 +36,15 @@ public class ExceptionController {
 		// /user/pwd_updateform 으로 요청을 다시 하라고 리다일텍트 응답하기
 		return "redirect:/user/pwd_updateform";
 	}
+	
+	@ExceptionHandler(UserNameException.class)
+	public String UserName(UserNameException une, RedirectAttributes ra) {
+		
+		// 리다일렉트 이동된 페이지에서도 한번 사용할 수 있다.
+		// Thymeleaf 에서 ${exception} 으로 참조 가능
+		ra.addFlashAttribute("exception",une);
+		
+		// /user/pwd_updateform 으로 요청을 다시 하라고 리다일텍트 응답하기
+		return "redirect:/file/list";
+	}
 }
