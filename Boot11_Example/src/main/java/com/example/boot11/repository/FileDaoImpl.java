@@ -19,8 +19,9 @@ public class FileDaoImpl implements FileDao{
 	}
 
 	@Override
-	public List<FileDto> getList() {	
-		return session.selectList("file.getList");
+	public List<FileDto> getList(FileDto dto) {	
+		// FileDto 에는 보여줄 page 에 해당하는 startRowNum 과 endRowNum 이 들어있다.
+		return session.selectList("file.getList",dto);
 	}
 
 	@Override
@@ -34,8 +35,9 @@ public class FileDaoImpl implements FileDao{
 	}
 
 	@Override
-	public int getCount() {
-		return session.selectOne("file.getCount");
+	public int getCount(FileDto dto) {
+		// dto 에 condition 과 keyword 는 null 일수도 있고 아닐수도 있다.
+		return session.selectOne("file.getCount",dto);
 	}
 
 }

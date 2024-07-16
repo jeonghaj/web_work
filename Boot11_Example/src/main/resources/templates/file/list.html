@@ -35,6 +35,34 @@
 				</tr>
 			</tbody>
 		</table>
+        <nav>
+            <ul class="pagination" th:if="${totalPageCount ne 0}">
+                <li th:if="${startPageNum != 1}" class="page-item">
+                    <a class="page-link" th:href="@{/file/list(pageNum=${startPageNum-1},condition=${dto.condition},keyword=${dto.keyword})}">Prev</a>
+                </li>
+                <li th:each="i : ${#numbers.sequence(startPageNum, endPageNum)}" class="page-item" th:classappend="${i} == ${pageNum} ? 'active'">
+                    <a class="page-link" th:href="@{/file/list(pageNum=${i},condition=${dto.condition},keyword=${dto.keyword})}">[[${i}]]</a>
+                </li>
+                <li th:if="${endPageNum < totalPageCount}" class="page-item">
+                    <a class="page-link" th:href="@{/file/list(pageNum=${endPageNum+1},condition=${dto.condition},keyword=${dto.keyword})}">Next</a>
+                </li>
+            </ul>
+        </nav>   
+    	<!-- 검색폼 -->
+        <form th:action="@{/file/list}" method="get">
+        	<label for="condition">검색조건</label>
+        	<select name="condition" id="condition">
+        		<option th:selected="${dto.condition eq 'title_filename'}" value="title_filename">제목 + 파일명</option>
+        		<option th:selected="${dto.condition eq 'title'}" value="title">제목</option>
+        		<option th:selected="${dto.condition eq 'writer'}" value="writer">작성자</option>
+        	</select>
+        	<input th:value="${dto.keyword}" type="text" name="keyword" placeholder="검색어..."/>
+        	<button type="submit">검색</button>
+        	<a class="btn btn-success btn-sm" th:href="@{/file/list}">새로고침</a>
+        </form>
+        <p th:if="${not #strings.isEmpty(dto.keyword)}">
+        	<strong th:text="${totalRow}"></strong> 개의 자료가 검색 되었습니다
+        </p>
 	</div>
 </body>
 </html>

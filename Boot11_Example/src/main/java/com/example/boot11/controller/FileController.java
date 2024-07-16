@@ -29,13 +29,6 @@ public class FileController {
 		service.delete(num);		
 		return "redirect:/file/list";
 	}
-
-	@GetMapping("/file/list")
-	public String list(Model model) {
-		//서비스 객체에 Model 의 참조값을 전달해서 파일 목록이 Model 객체에 담기도록 한다.
-		service.getList(model);
-		return "file/list";
-	}
 	
 	@GetMapping("/file/uploadform")
 	public String uploadForm() {
@@ -46,6 +39,14 @@ public class FileController {
 	public String upload(FileDto dto) {
 		service.insert(dto);
 		return "file/upload";
+	}
+	// FileDto 에는 pageNum, condition, keyword 값이 담길수도 있다.
+	// get 방식 파라미터값이 넘어오면 담긴다.
+	@GetMapping("/file/list")
+	public String list(Model model, FileDto dto) {
+		//서비스 객체에 Model 의 참조값을 전달해서 파일 목록이 Model 객체에 담기도록 한다.
+		service.getList(model, dto);
+		return "file/list";
 	}
 	
 }

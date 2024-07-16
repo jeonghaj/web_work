@@ -10,7 +10,7 @@ import org.springframework.ui.Model;
 import com.example.boot11.dto.FileDto;
 
 public interface FileService {
-	public void getList(Model model);
+	public void getList(Model model, FileDto dto);
 //	public List<FileDto> getList();
 	public  ResponseEntity<InputStreamResource> download(int num) throws UnsupportedEncodingException, FileNotFoundException;
 	
