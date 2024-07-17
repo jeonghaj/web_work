@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cafe">
+	
+	<sql id="search">
+		<choose>
+			<when test="condition == 'title_content'">
+				WHERE title LIKE '%'||#{keyword}||'%' OR content LIKE '%'||#{keyword}||'%'
+			</when>
+			<when test="condition == 'title'">
+				WHERE title LIKE '%'||#{keyword}||'%'
+			</when>
+			<when test="condition == 'writer'">
+				WHERE writer LIKE '%'||#{keyword}||'%'
+			</when>
+		</choose>
+	</sql>
+	
+	<sql id="column">
+		num,writer,title,content,viewCount, TO_CHAR(regdate, 'YYYY.MM.DD HH24:MI') AS regdate
+	</sql>
+
+	<update id="update" parameterType="cafeDto">
+		UPDATE board_cafe
+		SET title=#{title}, content=#{content}
+		WHERE num=#{num}
+	</update>
+
+	<delete id="delete" parameterType="int">
+		DELETE FROM board_cafe
+		WHERE num=#{num}
+	</delete>
+	
+	<select id="getData" parameterType="int" resultType="cafeDto">
+		SELECT <include refid="column"/>
+		FROM board_cafe
+		WHERE num=#{num}
+	</select>
+	<!-- 
+		parameter 로 전달되는 CafeDto 에는 검색 keyword 가 있을 수 있다.
+		keyword 가 있다면 keyword 에 해당하는 글 목록중에서 이전글의 번호와 다음글의 번호를 select 해야한다.
+	 -->
+	<select id="getDetail" parameterType="cafeDto" resultType="cafeDto">
+		SELECT *
+		FROM
+			(SELECT <include refid="column"/>, 
+				LAG(num, 1, 0) OVER (ORDER BY num DESC) AS prevNum,
+				LEAD(num, 1, 0) OVER (ORDER BY num DESC) AS nextNum
+			FROM board_cafe
+			<include refid="search"/> ) result1
+		WHERE num=#{num}
+	</select>
+
+	<insert id="insert" parameterType="cafeDto">
+		INSERT INTO board_cafe
+		(num, writer, title, content, viewCount, regdate)
+		VALUES(board_cafe_seq.NEXTVAL, #{writer}, #{title}, #{content}, 0, SYSDATE)
+	</insert>
+
+	<select id="getCount" resultType="int" parameterType="cafeDto">
+		SELECT NVL(MAX(ROWNUM), 0)
+		FROM board_cafe
+		<include refid="search"/>
+	</select>
+
+	<select id="getList" parameterType="cafeDto" resultType="cafeDto">
+		SELECT *
+		FROM
+			(SELECT result1.*, ROWNUM AS rnum
+			FROM 
+				(SELECT <include refid="column"/>
+				FROM board_cafe
+				<include refid="search"/>
+				ORDER BY num DESC) result1)
+		WHERE rnum BETWEEN #{startRowNum} AND #{endRowNum}
+	</select>
+
+
+</mapper>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>/cafe/detail.html</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<style>
+	.content{
+		border-radius: 5px;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	}
+</style>
+</head>
+<body>
+	<div class="container">
+		<a th:if="${dto.prevNum ne 0}" th:href="@{/cafe/detail(num=${dto.prevNum}, condition=${dto.condition}, keyword=${dto.keyword})}">이전글</a> 
+		<a th:if="${dto.nextNum ne 0}" th:href="@{/cafe/detail(num=${dto.NextNum}, condition=${dto.condition}, keyword=${dto.keyword})}">다음글</a>
+		
+		<p th:if="${not #strings.isEmpty(dto.keyword)}">
+			<strong>[[${dto.condition}]]</strong> 조건
+			<strong>[[${dto.keyword}]]</strong> 검색어로 검색된 내용 
+		</p>	
+		<h3>글 상세 보기</h3>
+		<table class="table table-bordered" >
+			<tr>
+				<th>글번호</th>
+				<td>[[${dto.num}]]</td>
+			</tr>
+			<tr>
+				<th>작성자</th>
+				<td>[[${dto.writer}]]</td>
+			</tr>
+			<tr>
+				<th>제목</th>
+				<td>[[${dto.title}]]</td>
+			</tr>
+			<tr>
+				<th>조회수</th>
+				<td>[[${dto.viewCount}]]</td>	
+			</tr>
+			<tr>
+				<th>작성일</th>
+				<td th:text="${dto.regdate}"></td>
+			</tr>
+		</table>
+		<div class="content">[(${dto.content})]</div>
+
+		<th:block th:if="${dto.writer eq session.userName}">
+			<a class="btn btn-outline-success btn-sm" th:href="@{'/cafe/updateform?num=' + ${dto.num}}">수정</a>
+			<a class="btn btn-outline-danger btn-sm" href="javascript:" onclick="deleteConfirm()">삭제</a>
+			<script th:inline="javascript">
+				
+				//thymeleaf 가 아래의 javascript 를 어떻게 출력했는지 확인해 보세요
+				let dto=[[${dto}]];
+				let contextPath=[[@{/}]];
+				// 역슬레시 제거하기
+				contextPath = contextPath.replace("\\", "");
+				
+				let contextPath2="[(@{/})]";
+				
+				function deleteConfirm(){
+					
+					const isDelete=confirm("이 글을 삭제 하겠습니까?");
+					if(isDelete){
+						//javascript 를 이용해서 페이지 이동 시키기 
+						location.href=contextPath+"cafe/delete?num=[[${dto.num}]]";
+					}
+				}
+			</script>
+		</th:block>
+	</div>
+</body>
+</html>

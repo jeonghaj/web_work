@@ -19,9 +19,13 @@ public class SecurityConfig {
 		// 로그인요구를 예외로 할 페이지 ( home, 로그인이 필요없는 페이지, 자발적 로그인 폼)
 		String [] whiteList= {"/","/user/loginform","/user/login_fail","/user/expired",
 				"/user/signup_form","/user/signup", "/error","/upload/images/*",
-				"/file/list", "/file/download"}; 
+				"/file/list", "/file/download","/cafe/list","/cafe/detail","/editor/images/*"}; 
 		//.csrf / .formLogin / .formLogout => Customizer type 반환
 		httpSecurity
+		//동일한 origin 에서 iframe 을 사용할 수 있도록 설정(default 값은 사용 불가)
+		.headers(header ->
+			header.frameOptions(option -> option.sameOrigin()) // SmartEditor 에서 필요함
+		)
 		.csrf(csrf->csrf.disable())
 		.authorizeHttpRequests(config ->
 			config
