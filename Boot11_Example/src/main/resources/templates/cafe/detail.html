@@ -9,6 +9,16 @@
 		border-radius: 5px;
 		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 	}
+	.comment-form{
+		display: flex;
+	}
+	.comment-form textarea{
+		height: 100px;
+		flex-grow: 1;
+	}
+	.comment-form button{
+		flex-basis: 100px;
+	}
 </style>
 </head>
 <body>
@@ -68,6 +78,29 @@
 				}
 			</script>
 		</th:block>
+		<h4>댓글을 입력해 주세요</h4>
+		<!-- 원글에 댓글을 작성할 폼 -->
+		<form class="comment-form" th:action="@{/cafe/comment_insert}" method="post">
+			<!-- 원글의 글번호가 댓글의 ref_group 번호가 된다. -->
+			<input type="hidden" name="ref_group" th:value="${dto.num}"/>
+			<!-- 원글의 작성자가 댓글의 대상자가 된다. -->
+			<input type="hidden" name="target_id" th:value="${dto.writer}" />
+			<textarea name="content">[[${session.userName == null ? "댓글 작성을 위해 로그인이 필요합니다":""}]]</textarea>
+			<button type="submit">확인</button>
+		</form>
+		<script>
+			//클라이언트가 로그인 했는지 여부를 javascript 변수에 담아놓고 필요한 처리를 한다.
+			const isLogin = [[${session.userName == null ? false : true }]]
+			//원글에 댓글달기 폼에 이벤트 submit 이벤트 발생했을때 실행할 함수 등록
+			document.querySelector(".comment-form").addEventListener("submit",(e)=>{
+				//로그인 하지 않았으면 (isLogin=false) 조건이 true 가 되어(!false) 아래 로직이 실행됨
+				if(!isLogin){ 
+					e.preventDefault();//폼 전송 막기
+					alert("로그인이 필요합니다");
+					location.href="[[@{/}]]user/loginform"
+				}
+			})
+		</script>
 	</div>
 </body>
 </html>

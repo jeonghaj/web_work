@@ -7,7 +7,10 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
 
+import com.example.boot11.dto.CafeCommentDto;
 import com.example.boot11.dto.CafeDto;
+import com.example.boot11.exception.NotOwnerException;
+import com.example.boot11.repository.CafeCommentDao;
 import com.example.boot11.repository.CafeDao;
 
 @Service
@@ -20,6 +23,7 @@ public class CafeServiceImpl implements CafeService{
 	
 	//DI
 	@Autowired private CafeDao cafeDao;
+	@Autowired private CafeCommentDao commentDao;
 	
 	@Override
 	public void getList(Model model, CafeDto dto) {
@@ -82,7 +86,19 @@ public class CafeServiceImpl implements CafeService{
 
 	@Override
 	public void deleteContent(int num) {
+		//글 작성자와
+		CafeDto dto = cafeDao.getData(num);
+		String writer = dto.getWriter();
+		//로그인된 사용자와 같은 경우에만 삭제
+		String userName = SecurityContextHolder.getContext().getAuthentication().getName();
+		if(userName.equals(writer)) {
+			cafeDao.delete(num);
+		}else {
+			//만일 일치하지 않으면 예외(NotOwnerException) 발생 시키기
+			throw new NotOwnerException("금지된 요청입니다.");
+		}
 		
+	
 	}
 
 	@Override
@@ -93,7 +109,32 @@ public class CafeServiceImpl implements CafeService{
 
 	@Override
 	public void updateContent(CafeDto dto) {
+		String writer = cafeDao.getData(dto.getNum()).getWriter();
+		String userName = SecurityContextHolder.getContext().getAuthentication().getName();
+		if(!writer.equals(userName)) {
+			throw new NotOwnerException("금지된 요청입니다");
+		}
 		cafeDao.update(dto);
+	}
+
+	@Override
+	public void saveComment(CafeCommentDto dto) {
+		
+	}
+
+	@Override
+	public void deleteComment(int num) {
+		
+	}
+
+	@Override
+	public void updateComment(CafeCommentDto dto) {
+		
+	}
+
+	@Override
+	public void getCommnetList(Model model, CafeCommentDto dto) {
+		
 	}
 
 }

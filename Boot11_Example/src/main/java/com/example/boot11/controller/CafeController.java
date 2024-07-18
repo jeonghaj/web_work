@@ -16,14 +16,22 @@ public class CafeController {
 	
 	@PostMapping("/cafe/update")
 	public String update(CafeDto dto) {
+		//서비스 객체를 이용해서 수정을 반영
 		service.updateContent(dto);
-		return "cafe/update";
+		//해당 글 자세히보기로 리다일렉트 이동(GET 방식 parameter 로 글번호도 전달해야한다)
+		return "redirect:/cafe/detail?num="+dto.getNum();
 	}
 	
 	@GetMapping("/cafe/updateform")
 	public String updateForm(Model model,int num) {
 		service.getData(model, num);
 		return "cafe/updateform";
+	}
+	
+	@GetMapping("/cafe/delete")
+	public String delete(int num) {
+		service.deleteContent(num);
+		return "redirect:/cafe/list";
 	}
 	
 	@GetMapping("/cafe/detail")

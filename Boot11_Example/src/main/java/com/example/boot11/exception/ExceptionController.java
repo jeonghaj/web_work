@@ -47,4 +47,10 @@ public class ExceptionController {
 		// /user/pwd_updateform 으로 요청을 다시 하라고 리다일텍트 응답하기
 		return "redirect:/file/list";
 	}
+	@ExceptionHandler(NotOwnerException.class)
+	public String NotOwner(NotOwnerException noe, RedirectAttributes ra) {
+		
+		ra.addFlashAttribute("exception",noe);
+		return "redirext:/file/list";
+	}
 }
