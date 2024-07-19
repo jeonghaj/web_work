@@ -20,5 +20,5 @@ public interface CafeService {
 	//댓글 수정 서비스
 	public void updateComment(CafeCommentDto dto);
 	//댓글 목록을 model 에 담아주는 서비스
-	public void getCommnetList(Model model, CafeCommentDto dto);
+	public void getCommentList(Model model, CafeCommentDto dto);
 }

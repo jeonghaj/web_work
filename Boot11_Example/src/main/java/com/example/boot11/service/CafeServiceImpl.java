@@ -77,11 +77,45 @@ public class CafeServiceImpl implements CafeService{
 
 	@Override
 	public void getDetail(Model model, CafeDto dto) {
-		//이전글의 글번호 다음글의 글번호도 받아올 수 있도록 getDetail() 메소드를 호출한다
-		CafeDto resultDto = cafeDao.getDetail(dto);
+		//이전글의 글번호 다음글의 글번호도 받아 올수 있도록 getDetail() 메소드를 호출한다.
+		CafeDto resultDto=cafeDao.getDetail(dto);
+		//원래의 검색 조건을 글정보가 들어 있는 결과 dto 에 추가해준다. 
 		resultDto.setCondition(dto.getCondition());
 		resultDto.setKeyword(dto.getKeyword());
-		model.addAttribute("dto",resultDto);
+		
+		//댓글 목록을 얻어온다 
+		//CafeDto 에 ref_group 번호를 담아서 dao 에 전달해서 댓글 목록을 얻어낸다
+		CafeCommentDto commentDto=new CafeCommentDto();
+		//원글의 글번호를 담아서 
+		commentDto.setRef_group(dto.getNum());
+		//댓글의 페이지 번호
+		int pageNum=1;
+		/*
+			[ 댓글 페이징 처리에 관련된 로직 ]
+		*/
+		//한 페이지에 댓글을 몇개씩 표시할 것인지
+		final int PAGE_ROW_COUNT=10;
+	
+		//보여줄 페이지의 시작 ROWNUM
+		int startRowNum=1+(pageNum-1)*PAGE_ROW_COUNT;
+		//보여줄 페이지의 끝 ROWNUM
+		int endRowNum=pageNum*PAGE_ROW_COUNT;
+		//계산된 값을 dto 에 담는다
+		commentDto.setStartRowNum(startRowNum);
+		commentDto.setEndRowNum(endRowNum);
+		
+		//원글에 달린 댓글 목록 얻어내기 
+		List<CafeCommentDto> commentList=commentDao.getList(commentDto);
+		
+		//원글의 글번호를 이용해서 댓글 전체의 갯수를 얻어낸다.
+		int totalRow=commentDao.getCount(dto.getNum());
+		//댓글 전체 페이지의 갯수
+		int totalPageCount=(int)Math.ceil(totalRow/(double)PAGE_ROW_COUNT);
+		
+		//Model 객체에 template 페이지에서 필요한 정보를 담는다.
+		model.addAttribute("dto", resultDto);
+		model.addAttribute("commentList", commentList);
+		model.addAttribute("totalPageCount", totalPageCount);
 	}
 
 	@Override
@@ -119,7 +153,21 @@ public class CafeServiceImpl implements CafeService{
 
 	@Override
 	public void saveComment(CafeCommentDto dto) {
+		//댓글 작성자는 SpringSecurity 로 부터 얻어내기
+		String writer = SecurityContextHolder.getContext().getAuthentication().getName();
 		
+		//글 번호를 미리 얻어낸다.
+		int num = commentDao.getSequence();
+		dto.setWriter(writer);
+		dto.setNum(num);
+		
+		//만일 comment_group 번호가 넘어오지 않으면 원글의 댓글이다
+		if(dto.getComment_group()==0) {
+			//원글의 댓글인 경우 댓글의 번호(num) 가 곧 comment_group 번호가 된다
+			dto.setComment_group(num);
+		}
+		//DB 에 저장하기 
+		commentDao.insert(dto);
 	}
 
 	@Override
@@ -133,7 +181,7 @@ public class CafeServiceImpl implements CafeService{
 	}
 
 	@Override
-	public void getCommnetList(Model model, CafeCommentDto dto) {
+	public void getCommentList(Model model, CafeCommentDto dto) {
 		
 	}
 

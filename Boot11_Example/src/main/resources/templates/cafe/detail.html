@@ -88,6 +88,23 @@
 			<textarea name="content">[[${session.userName == null ? "댓글 작성을 위해 로그인이 필요합니다":""}]]</textarea>
 			<button type="submit">확인</button>
 		</form>
+		
+		<!-- 댓글 목록 -->
+		<div class="comments">
+			<ul>
+				<li th:each="tmp : ${commentList}">
+					<dl>
+						<dt>
+							<span th:text="${tmp.writer}"></span>
+						</dt>
+						<dd>
+							<pre>[[${tmp.content}]]</pre>
+						</dd>
+					</dl>
+				</li>
+				
+			</ul>
+		</div>
 		<script>
 			//클라이언트가 로그인 했는지 여부를 javascript 변수에 담아놓고 필요한 처리를 한다.
 			const isLogin = [[${session.userName == null ? false : true }]]
