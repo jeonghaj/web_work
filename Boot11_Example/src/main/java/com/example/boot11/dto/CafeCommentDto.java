@@ -20,7 +20,7 @@ public class CafeCommentDto {
 	private int ref_group;
 	private int comment_group;
 	private String deleted;
-	private String refdate;
+	private String regdate;
 	//댓글 작성자의 profile 이미지를 출력하기 위한 필드 (user_info 테이블과 join 필요)
 	private String profile;
 	//페이징 처리를 위한 필드

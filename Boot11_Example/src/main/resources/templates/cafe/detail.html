@@ -9,15 +9,91 @@
 		border-radius: 5px;
 		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 	}
-	.comment-form{
+	/* 덧글 프로필 이미지를 작은 원형으로 만든다. */
+	.profile-image{
+		width: 50px;
+		height: 50px;
+		border: 1px solide #cecece;
+		/* 원형 => width, height 동일하게 > border-radius : 50% */
+		border-radius: 50%;
+	}
+	/* ul 요소의 기본 스타일 제거 */
+	.comments ul{
+		padding: 0;
+		margin: 0;
+		list-style-type: none;
+	}
+	/* .replu_icon 을 li 요소를 기준으로 배치하기 */
+	.comments li{
+		position: relative;
+	}
+	.comments .reply-icon{
+		position: absolute;
+		top: 1rem;
+		left: 1rem;
+		color: red;
+	}
+	
+	/* 대댓글을 등여쓰기 위한 클래스 */
+	.indent{
+		padding-left: 50px;
+	}
+	
+	.comment-form, .re-insert-form, .update-form{
 		display: flex;
 	}
-	.comment-form textarea{
+	.comment-form textarea, .re-insert-form textarea, .update-form textarea{
 		height: 100px;
 		flex-grow: 1;
 	}
-	.comment-form button{
+	.comment-form button, .re-insert-form button, .update-form button{
 		flex-basis: 100px;
+	}
+	/* 대댓글 폼은 일딴 숨겨 놓는다 */
+	.re-insert-form{
+		display: none;
+	}
+	.update-form{
+		display: none;
+	}
+	
+		/* 댓글 출력 디자인 */
+	.comments pre {
+	  display: block;
+	  padding: 9.5px;
+	  margin: 5px 0;
+	  font-size: 13px;
+	  line-height: 1.42857143;
+	  color: #333333;
+	  word-break: break-all;
+	  word-wrap: break-word;
+	  background-color: #f5f5f5;
+	  border: 1px solid #ccc;
+	  border-radius: 4px;
+	}	
+	
+		.loader{
+		/* 로딩 이미지를 가운데 정렬하기 위해 */
+		text-align: center;
+		/* 일단 보이지 않게 설정 */
+		display: none;
+	}
+	/* 회전하는 키프레임 정의 */
+	@keyframes rotateAni{
+		from{
+			transform: rotate(0deg);
+		}
+		to{
+			transform: rotate(360deg);
+		}
+	}
+	/* 회전하는 키프레임을 로더 이미지에 무한 반복 시키기 */
+	.loader svg{
+		animation: rotateAni 1s ease-out infinite;
+	}
+	
+	body{
+		padding-bottom: 200px;
 	}
 </style>
 </head>
@@ -92,19 +168,76 @@
 		<!-- 댓글 목록 -->
 		<div class="comments">
 			<ul>
-				<li th:each="tmp : ${commentList}">
+				<li th:each="tmp : ${commentList}" th:id="'reli'+${tmp.num}"
+					th:class="${tmp.num ne tmp.comment_group ? 'indent' : ''}">
+				
+					<svg th:style="${tmp.num ne tmp.comment_group ? 'display:inline' : 'display:none'}" class="reply-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+			  			<path fill-rule="evenodd" d="M1.5 1.5A.5.5 0 0 0 1 2v4.8a2.5 2.5 0 0 0 2.5 2.5h9.793l-3.347 3.346a.5.5 0 0 0 .708.708l4.2-4.2a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 8.3H3.5A1.5 1.5 0 0 1 2 6.8V2a.5.5 0 0 0-.5-.5z"/>
+					</svg>
+					
+					<th:block th:if="${tmp.deleted eq 'yes'}">
+						<p>삭제된 댓글 입니다.</p>
+					</th:block>
+					<th:block th:unless="${tmp.deleted eq 'yes'}">
+						
 					<dl>
 						<dt>
+							<th:block th:if="${tmp.profile == null}">
+								<svg class="profile-image" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+									  <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+									  <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+									</svg>
+							</th:block>
+							<th:block th:unless="${tmp.profile == null}">
+								<img class="profile-image" th:src="@{/upload/images/{name}(name=${tmp.profile})}"/>
+							</th:block>
+						</dt>
+						<dt>
 							<span th:text="${tmp.writer}"></span>
+							<!-- 댓글 대상자를 조건부로 출력 (대댓글에만 출력) -->
+							<th:block th:if="${tmp.num ne tmp.comment_group}">
+								@<i th:text="${tmp.target_id}"></i>
+							</th:block>
+							<!-- 댓글 작성일자 -->
+							<small th:text="${tmp.regdate}"></small>
+							<!-- 답글 링크 -->
+							<a th:attr="data-num=${tmp.num}" class="reply-link" href="javascript:">답글</a>
+							<!-- 로그인된 유저가 쓴 댓글일 경우 수정, 삭제 링크를 제공한다 -->
+							<th:block th:if="${tmp.writer eq session.userName}">
+								<a th:attr="data-num=${tmp.num}" class="update-link" href="javascript:">수정</a>
+								<a th:attr="data-num=${tmp.num}" class="delete-link" href="javascript:">삭제</a>							
+							</th:block>
 						</dt>
 						<dd>
-							<pre>[[${tmp.content}]]</pre>
+							<pre th:id="'content'+${tmp.num}">[[${tmp.content}]]</pre>
 						</dd>
 					</dl>
+					<!-- 댓글의 댓글 작성할 폼 미리 출력하기 -->
+					<form th:id="'reForm'+${tmp.num}" class="re-insert-form" 
+						th:action="@{/cafe/comment_insert}" method="post">
+						<input type="hidden" name="ref_group" th:value="${dto.num }"/>
+						<input type="hidden" name="target_id" th:value="${tmp.writer }"/>
+						<input type="hidden" name="comment_group" th:value="${tmp.comment_group }"/>
+						<textarea name="content"></textarea>
+						<button type="submit">등록</button>
+					</form>
+					
+						<!-- 댓글 수정폼 -->
+						<form th:if="${tmp.writer eq session.userName}" 
+							class="update-form" th:id="'updateForm'+${tmp.num}"
+							th:action="@{/cafe/comment_update}" method="post">
+							<input type="hidden" name="num" th:value="${tmp.num}"/>
+							<textarea name="content">[[${tmp.content}]]</textarea>
+							<button type="submit">수정확인</button>
+						</form>	
+					
+					</th:block>
+					
 				</li>
-				
 			</ul>
+			
 		</div>
+		
 		<script>
 			//클라이언트가 로그인 했는지 여부를 javascript 변수에 담아놓고 필요한 처리를 한다.
 			const isLogin = [[${session.userName == null ? false : true }]]
@@ -116,8 +249,193 @@
 					alert("로그인이 필요합니다");
 					location.href="[[@{/}]]user/loginform"
 				}
-			})
+			});
+			
+			//댓글의 현재 페이지 번호를 관리할 변수를 만들고 초기잢 1 대입하기
+			let currentPage=1;
+			//마지막 페이지는 totalPageCount 이다
+			let lastPage = [[${totalPageCount}]];
+			//추가로 댓글을 요청하고 그 작업이 끝났는지 여부를 관리할 변수
+			let isLoading=false; // 현재 로딩중인지 여부
+			
+			//스크롤 이벤트가 일어났을때 호출되는 함수 등록
+			window.addEventListener("scroll",()=>{
+				/* 
+					window.innerHeight : 웹브라우저 창의 높이
+					window.scrollY : 현재 스클롤 된 양
+					document.body.offsetHeight : 문서(content)의 전체 높이
+				*/
+				//바닥 까지 스크롤 했는지 여부 
+				const isBottom = 
+					window.innerHeight + window.scrollY  >= document.body.offsetHeight;
+			
+				//현재 페이지가 마지막 페이지인지 여부 알아내기
+				let isLast = currentPage == lastPage;	
+				//현재 바닥까지 스크롤 했고 로딩중이 아니고 현재 페이지가 마지막이 아니라면
+				if(isBottom && !isLoading && !isLast){
+					//로딩중이라고 표시
+					isLoading=true;
+					//로딩바를 띄우고
+					document.querySelector(".loader").style.display="block";
+					//페이지 1 증가
+					currentPage++;
+					//추가 댓글을 fetch() 함수를 이용해서 요청하고 
+					fetch("[[@{/}]]cafe/comment_list?pageNum="+currentPage+"&ref_group=[[${dto.num}]]")
+					.then(res=>res.text())
+					.then(data=>{
+						//data 는 댓글이 출력된 li 가 여러개 들어있는 html 형식의 문자열
+						console.log(data);
+						//html 형식의 문자열을 댓글 출력하는 ul 의 아랫쪽에 html 로 해석하면서 끼워 넣기 
+						document.querySelector(".comments ul")
+							.insertAdjacentHTML("beforeend", data);
+							
+						addUpdateFormListener(".update-form");
+					
+						//새로 추가된 댓글 li 요소 안에 있는 a 요소를 찾아서 이벤트 리스너 등록 하기 
+						addUpdateListener(".page-"+currentPage+" .update-link");
+						addDeleteListener(".page-"+currentPage+" .delete-link");
+						addReplyListener(".page-"+currentPage+" .reply-link");
+						addUpdateFormListener(".page-"+currentPage+" .update-form");
+						
+						//로딩이 끝났다고 표시한다.
+						isLoading=false;
+						//로딩바 숨기기
+						document.querySelector(".loader").style.display="none";
+					});
+				}	
+			});
+			
+			addReplyListener(".reply-link");
+			addDeleteListener(".delete-link");
+			addUpdateListener(".update-link");
+			addUpdateFormListener(".update-form");
+			
+			//인자로 전달되는 선택자를 이용해서 이벤트 리스너를 등록하는 함수
+			function addUpdateFormListener(selector){
+				//댓글 수정폼 제출에 대한 처리
+				const updateForms=document.querySelectorAll(selector);
+				for(let i=0; i<updateForms.length; i++){
+					//모든 수정폼에 "submit" 리스너 함수 등록
+					updateForms[i].addEventListener("submit", (e)=>{
+						//폼 제출을 막은 다음 
+						e.preventDefault();
+						//submit 이벤트가 일어난 form 의 참조값을 form 이라는 변수에 담기 
+						const form=e.target;
+						//폼의 action 속성의 value 얻어오기
+						const url=form.getAttribute("action");
+						//폼에 입력된 전송할 내용을 query 문자열 형식으로 얻어내기
+						// num=xxx&content=xxx
+						const queryString=new URLSearchParams(new FormData(form)).toString();
+						fetch(url, {
+							method:"POST",
+							headers:{"Content-Type":"application/x-www-form-urlencoded; charset=utf-8"},
+							body:queryString
+						})
+						.then(res=>res.json())
+						.then(data=>{
+							if(data.isSuccess){
+								//data.num 은 수정한 댓글번호
+								//data.content 는 수정한 글의 내용 
+								//실제 출력된 content 수정하기
+								document.querySelector("#content"+data.num).innerText=data.content;
+								//폼을 숨기고
+								form.style.display="none";
+								//링크 내용 수정
+								document.querySelector(`.update-link[data-num="${data.num}"]`)
+									.innerText="수정";
+							}
+						})
+					});
+				}
+			}
+			
+			function addUpdateListener(selector){
+				//댓글 수정 링크에 대한 처리
+				const updateLinks=document.querySelectorAll(selector);
+				for(let i=0; i<updateLinks.length; i++){
+					updateLinks[i].addEventListener("click", (e)=>{
+						//클릭한 a 요소의 data-num 속성의 value 값을 읽어온다.(삭제할 댓글의 번호) 
+						const num=e.target.getAttribute("data-num");
+						//보여주거나 숨길 form 의 참조값 얻어내기 
+						const form=document.querySelector("#updateForm"+num);
+						//눌러진 링크의 innerText 읽어오기
+						const currentText=e.target.innerText;
+						if(currentText === "수정"){
+							//보이게 하기 
+							form.style.display="flex";
+							e.target.innerText="수정취소";
+						}else if(currentText === "수정취소"){
+							form.style.display="none";
+							e.target.innerText="수정";
+						}	
+					});
+				}
+			}
+					
+
+			function addDeleteListener(selector){
+				//삭제 링크에 대한 처리
+				const deleteLinks=document.querySelectorAll(selector);
+				for(let i=0; i<deleteLinks.length; i++){
+					deleteLinks[i].addEventListener("click", (e)=>{
+						//클릭한 a 요소의 data-num 속성의 value 값을 읽어온다.(삭제할 댓글의 번호) 
+						const num=e.target.getAttribute("data-num");
+						fetch("[[@{/cafe/comment_delete}]]"+"?num="+num)
+						.then(res=>res.json())
+						.then(data=>{
+							if(data.isSuccess){
+								//댓글이 있었던곳에 "삭제된 댓글입니다" 를 출력해 준다.
+								document.querySelector("#reli"+num).innerHTML="<p>삭제된 댓글 입니다.</p>";
+							}
+						})
+						.catch(error=>{
+							console.log(error);
+						}); 
+					});
+				}
+			}
+			
+			function addReplyListener(selector){
+				
+				//답글 링크에 대한 처리 
+				const replyLinks=document.querySelectorAll(selector);
+				//반복문 돌면서 모든 링크에 이벤트 리스너 함수 등록하기 
+				for(let i=0; i<replyLinks.length; i++){
+					replyLinks[i].addEventListener("click", (e)=>{
+						
+						if(!isLogin){
+								e.preventDefault();//폼 전송 막기
+								alert("로그인이 필요 합니다");
+								location.href="[[@{/}]]user/loginform";
+						}
+						
+						//클릭한 a 요소의 data-num 속성의 value 값을 읽어온다. 
+						const num=e.target.getAttribute("data-num");
+						//보여주거나 숨길 form 의 참조값 얻어내기 
+						const form=document.querySelector("#reForm"+num);
+						//눌러진 링크의 innerText 읽어오기
+						const currentText=e.target.innerText;
+						if(currentText === "답글"){
+							//보이게 하기 
+							form.style.display="flex";
+							e.target.innerText="취소";
+						}else if(currentText === "취소"){
+							form.style.display="none";
+							e.target.innerText="답글";
+						}	
+					});
+				}
+			}
+			
+			
 		</script>
+		
+		<div class="loader">
+			<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
+				  <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"/>
+				  <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"/>
+			</svg>
+		</div>	
 	</div>
 </body>
 </html>

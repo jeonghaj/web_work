@@ -1,0 +1,59 @@
+<!-- 댓글 목록을 이용해서 li 여러개 출력하기 -->
+<li th:each="tmp:${commentList}" th:id="'reli'+${tmp.num}" 
+	th:class="${tmp.num ne tmp.comment_group ? 'indent page-'+pageNum : 'page-'+pageNum}">
+	
+	<svg th:style="${tmp.num ne tmp.comment_group ? 'display:inline' : ''}" class="reply-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+		<path fill-rule="evenodd" d="M1.5 1.5A.5.5 0 0 0 1 2v4.8a2.5 2.5 0 0 0 2.5 2.5h9.793l-3.347 3.346a.5.5 0 0 0 .708.708l4.2-4.2a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 8.3H3.5A1.5 1.5 0 0 1 2 6.8V2a.5.5 0 0 0-.5-.5z"/>
+	</svg>
+	
+	<th:block th:if="${tmp.deleted eq 'yes'}">
+		<p>삭제된 댓글 입니다.</p>
+	</th:block>
+	<th:block th:unless="${tmp.deleted eq 'yes'}">
+		<dl>
+			<dt>
+				<th:block th:if="${tmp.profile == null}">
+					<svg class="profile-image" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+					  <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+					  <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+					</svg>
+				</th:block>
+				<th:block th:unless="${tmp.profile == null}">
+					<img  class="profile-image" th:src="@{/upload/images/{name}(name=${tmp.profile})}" alt="프로필 이미지" />						
+				</th:block>
+				
+				<span th:text="${tmp.writer}"></span>
+				<!-- 댓글 대상자 출력 -->
+				<th:block th:if="${tmp.num ne tmp.comment_group}">
+					@<i th:text="${tmp.target_id}"></i>
+				</th:block>
+				
+				<small th:text="${tmp.regdate}"></small>
+				<a th:attr="data-num=${tmp.num}" class="reply-link" href="javascript:">답글</a>
+				<th:block th:if="${tmp.writer eq session.userName}">
+					<a th:attr="data-num=${tmp.num}" class="update-link" href="javascript:">수정</a>
+					<a th:attr="data-num=${tmp.num}" class="delete-link" href="javascript:">삭제</a>
+				</th:block>
+			</dt>
+			<dd>
+				<pre th:id="'content'+${tmp.num}">[[${tmp.content}]]</pre>
+			</dd>
+		</dl>
+		<!-- 댓글의 댓글 작성할 폼 미리 출력하기 -->
+		<form th:id="'reForm'+${tmp.num}" class="re-insert-form" th:action="@{/cafe/comment_insert}" method="post">
+			<input type="hidden" name="ref_group" th:value="${ref_group }"/>
+			<input type="hidden" name="target_id" th:value="${tmp.writer }"/>
+			<input type="hidden" name="comment_group" th:value="${tmp.comment_group }"/>
+			<textarea name="content"></textarea>
+			<button type="submit">등록</button>
+		</form>
+		<!-- 댓글 수정폼 -->
+		<form th:if="${tmp.writer eq session.userName}" 
+			class="update-form" th:id="'updateForm'+${tmp.num}"
+			th:action="@{/cafe/comment_update}" method="post">
+			<input type="hidden" name="num" th:value="${tmp.num}"/>
+			<textarea name="content">[[${tmp.content}]]</textarea>
+			<button type="submit">수정확인</button>
+		</form>						
+	</th:block>
+</li>
