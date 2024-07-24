@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="gallery">
+	<select id="getList" resultType="galleryDto">
+		select num, writer, caption, saveFileName, regdate
+		from board_gallery
+		order by num asc
+	</select>
+	
+	<insert id="insert" parameterType="galleryDto">
+		insert into board_gallery
+		(num, writer, caption, saveFileName, regdate)
+		values(board_gallery_seq.nextval, #{writer}, #{caption}, #{saveFileName}, sysdate)
+	</insert>
+
+
+</mapper>

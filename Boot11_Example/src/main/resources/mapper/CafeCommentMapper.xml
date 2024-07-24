@@ -41,7 +41,7 @@
 				JOIN user_tbl
 				ON board_cafe_comment.writer = user_tbl.userName
 				WHERE ref_group=#{ref_group}
-				ORDER BY comment_group ASC, num ASC) result1)
+				ORDER BY comment_group DESC, num ASC) result1)
 		WHERE rnum BETWEEN #{startRowNum} AND #{endRowNum}
 			
 	</select>
