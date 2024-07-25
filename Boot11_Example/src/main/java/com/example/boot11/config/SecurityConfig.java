@@ -20,8 +20,8 @@ public class SecurityConfig {
 		String [] whiteList= {"/","/user/loginform","/user/login_fail","/user/expired",
 				"/user/signup_form","/user/signup", "/error","/upload/images/*",
 				"/file/list", "/file/download","/cafe/list","/cafe/detail","/editor/images/*",
-				"/cafe/comment_list"}; 
-		//.csrf / .formLogin / .formLogout => Customizer type 반환
+				"/cafe/comment_list","gallery/list"}; 
+		//.csrf / .formLogin / .formLogout => Customizer type 반환S
 		httpSecurity
 		//동일한 origin 에서 iframe 을 사용할 수 있도록 설정(default 값은 사용 불가)
 		.headers(header ->

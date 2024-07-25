@@ -57,4 +57,10 @@ public class GalleryServiceImpl implements GalleryService{
 		model.addAttribute("list",list);
 	}
 
+	@Override
+	public void detail(Model model, int num) {
+		GalleryDto dto = dao.getData(num);
+		model.addAttribute("dto",dto);
+	}
+
 }

@@ -30,4 +30,10 @@ public class GalleryController {
 	public String uploadForm() {
 		return "gallery/upload_form";
 	}
+	
+	@GetMapping("/gallery/detail")
+	public String detail(Model model,int num) {
+		service.detail(model, num);
+		return "gallery/detail";
+	}
 }

@@ -15,9 +15,9 @@
 		<a th:href="@{/gallery/upload_form}">목록에 추가</a>
 		<div class="row">
 			<div th:each="tmp : ${list}" class="col-sm-6 col-md-4 col-lg-3">
-				<div>[<strong>[[${tmp.num}]]</strong>]</div>
+				<div class="badge text-bg-secondary mb-2"> <strong>[[${tmp.num}]]</strong> </div>
 				<div class="card mb-3">
-					<a th:href="@{/gallery/detail/}"> 
+					<a th:href="@{/gallery/detail(num=${tmp.num})}"> 
 						<img class="card-img-top" th:src="@{/upload/images/{name}(name=${tmp.saveFileName})}">
 					</a>
 				</div>

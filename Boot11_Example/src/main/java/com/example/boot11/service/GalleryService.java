@@ -7,4 +7,5 @@ import com.example.boot11.dto.GalleryDto;
 public interface GalleryService {
 	public void insert(GalleryDto dto);
 	public void getList(Model model);
+	public void detail(Model model, int num);
 }

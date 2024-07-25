@@ -12,6 +12,11 @@
 		(num, writer, caption, saveFileName, regdate)
 		values(board_gallery_seq.nextval, #{writer}, #{caption}, #{saveFileName}, sysdate)
 	</insert>
-
+	
+	<select id="getData" parameterType="int" resultType="galleryDto">
+		select num, writer, caption, saveFileName, regdate
+		from board_gallery
+		where num = #{num}
+	</select>
 
 </mapper>
