@@ -21,4 +21,4 @@
   regdate date -- 이미지 업로드 날짜
   );
   
-  select * from board_gallery order by num desc;
+ create sequence board_gallery_seq;

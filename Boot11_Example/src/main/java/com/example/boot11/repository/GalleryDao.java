@@ -5,7 +5,9 @@ import java.util.List;
 import com.example.boot11.dto.GalleryDto;
 
 public interface GalleryDao {
-	public void upload(GalleryDto dto);
-	public List<GalleryDto> getList();
+	public void insert(GalleryDto dto);
+	public List<GalleryDto> getList(GalleryDto dto);
 	public GalleryDto getData(int num);
+	public int getCount();
+	public void delete(int num);
 }

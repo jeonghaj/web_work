@@ -31,6 +31,26 @@
 				<td>[[${dto.regdate}]]</td>	
 			</tr>
 		</table>
+		<p th:if="${dto.writer eq session.userName}">
+			<a class="btn btn-warning" th:href="@{/gallery/delete(num=${dto.num})}">삭제</a>
+		</p>
+		<!--  -->
+		<nav>
+			<ul class="pagination justify-content-center">
+				<li th:if="${dto.prevNum ne 0}" class="page-item mr-3">
+					<a class="page-link" th:href="@{/gallery/detail(num=${dto.prevNum})}">&larr; Prev</a>
+				</li>
+				<li th:unless="${dto.prevNum ne 0}" class="page-item mr-3 disabled">
+					<a class="page-link" href="javascript:">Prev</a>
+				</li>
+				<li th:if="${dto.nextNum ne 0}" class="page-item mr-3">
+					<a class="page-link" th:href="@{/gallery/detail(num=${dto.nextNum})}">Next &rarr;</a>
+				</li>
+				<li th:unless="${dto.nextNum ne 0}" class="page-item mr-3 disabled">
+					<a class="page-link" href="javascript:">Next</a>
+				</li>
+			</ul>
+		</nav>
 	</div>
 </body>
 </html>

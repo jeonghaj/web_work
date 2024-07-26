@@ -11,14 +11,18 @@
 </head>
 <body>
 	<div class="container">
+		<a th:href="@{/}">HOME</a>
 		<h2>Gallery List</h2>
 		<a th:href="@{/gallery/upload_form}">목록에 추가</a>
 		<div class="row">
 			<div th:each="tmp : ${list}" class="col-sm-6 col-md-4 col-lg-3">
-				<div class="badge text-bg-secondary mb-2"> <strong>[[${tmp.num}]]</strong> </div>
+				<div class="badge text-bg-secondary mb-2"> <strong>[[${tmp.num}]]</strong> </div
+				>
 				<div class="card mb-3">
 					<a th:href="@{/gallery/detail(num=${tmp.num})}"> 
-						<img class="card-img-top" th:src="@{/upload/images/{name}(name=${tmp.saveFileName})}">
+						<div class="imag-wrapper">
+							<img class="card-img-top" th:src="@{/upload/images/{name}(name=${tmp.saveFileName})}">						
+						</div>
 					</a>
 				</div>
 				<div class="card-body">
@@ -31,6 +35,27 @@
 					</p>
 				</div>
 			</div>
+		<!-- 페이징 처리 -->
+		<nav>
+			<ul class="pagination justify-content-center">
+				<li th:if="${startPageNum ne 1}" class="page-item">
+					<a class="page-link" th:href="@{/gallery/list(pageNum=${startPageNum-1})}">Prev</a>
+				</li>
+				<li th:unless="${startPageNum ne 1}" class="page-item disabled">
+					<a class="page-link" href="javascript:">Prev</a>
+				</li>
+				<li th:each="i : ${#numbers.sequence(startPageNum, endPageNum)}" th:class="${i eq pageNum ? 'page-item active' : 'page-item'}">
+					<a class="page-link" th:href="@{/gallery/list(pageNum=${i})}">[[${i}]]</a>
+				</li>
+				<li th:if="${endPageNum lt totalPageCount}" class="page-item">
+					<a class="page-link" th:href="@{/gallery/list(pageNum=${endPageNum+1})}">Next</a>
+				</li>
+				<li th:unless="${endPageNum lt totalPageCount}" class="page-item disabled">
+					<a class="page-link" href="javascript:">Next</a>
+				</li>
+			</ul>
+			
+		</nav>			
 
 		</div>
 </body>
