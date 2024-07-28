@@ -11,7 +11,6 @@
   SQL> create sequence user_seq;
   
   
-  
   -- 이미지 갤러리를 만들기 위한 테이블
   create table board_gallery(
   num number primary key,
