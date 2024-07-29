@@ -23,8 +23,9 @@ public class GalleryDto {
 	private int startRowNum;
 	private int endRowNum;
 	
-	private long fileSize;
-	private MultipartFile image; //이미지 파일 업로드 처리를 위한 필드
+	// <input type="file" name="images" multiple>
+	// 때문에 Multipart 배열 type 으로 필드를 선언하고 필드명도 images 로 변경
+	private MultipartFile[] images; //여러개의 이미지 파일 업로드 처리를 위한 필드
 	
 	private int prevNum; //이전글의 글번호
 	private int nextNum; //다음글의 글번호
