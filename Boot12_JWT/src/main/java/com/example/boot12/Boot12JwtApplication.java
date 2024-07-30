@@ -19,7 +19,7 @@ public class Boot12JwtApplication {
 	public void jwtTest() {
 		// "kimgura" 라는 id 로 토큰을 발급받아서 콘솔창에 출력해 보기
 		String token = util.generateToken("kimgura");
-		System.out.println("발급된 토큰:" + token);
+		System.out.println("발급된 토큰 : " + "Bearer+" + token);
 		//발급된 토큰을 복사해서 http://jwt.io 사이트에 들어가서 디코딩해볼 수 있다.
 	}
 
