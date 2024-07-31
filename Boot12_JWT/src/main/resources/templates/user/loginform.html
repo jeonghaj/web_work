@@ -6,6 +6,9 @@
 </head>
 <body>
 	<h3>LOGIN FORM</h3>
+	<th:block th:if="${not #strings.isEmpty(param.error)}">
+		<p>[[${errMsg}]]</p>
+	</th:block>
 	<form th:action="@{/user/login}" method="post">
 		<input type="text" name="userName" placeholder="사용자명.." />
 		<input type="password" name="password" placeholder="비밀번호.." />

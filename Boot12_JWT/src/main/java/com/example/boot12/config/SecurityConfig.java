@@ -63,8 +63,7 @@ public class SecurityConfig {
 				.passwordParameter("password")
 				.successHandler(successHandler)//로그인 성공 핸들러 등록
 				.failureHandler(failHandler) //로그인 실패 핸들러 등록
-				//.failureForwardUrl("/user/login_fail") //로그인 실패시 forward 될 url 설정
-				.failureForwardUrl("/user/login/fail")
+				//.failureForwardUrl("/user/login_fail") //로그인 실패시 forward 될 url 설정 >> AuthFailHandler 로 처리
 				.permitAll() //위에 명시한 모든 요청경로를 로그인 없이 요청할수 있도록 설정 
 		)
 		.logout(config ->
@@ -85,8 +84,10 @@ public class SecurityConfig {
 			//403 forbidden 인 경우 forward 이동 시킬 경로 설정 
 			config.accessDeniedPage("/user/denied")
 		)
+		//세션을 사용하지 않겠다. ( 세션이 상태를 가지지 못하게 (STATELESS))
 		.sessionManagement(config -> config.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
 		//토큰을 검사하는 필터를 security filter 가 동작하기 이전에 동작하도록 설정 한다.
+		//모든 요청에 대해서 토큰 관련 필터링을 하겠다
 		.addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class)
 		//세션을 사용할수 없기때문에 쿠키케시를 사용하도록 설정한다. 
 		.requestCache(config -> config.requestCache(cookCache));
