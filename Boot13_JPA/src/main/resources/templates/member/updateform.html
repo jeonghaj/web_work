@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div class="container">
+	<h1>회원정보 수정 양식</h1>
+		<form th:action="@{/member/update}" method="post">
+		<div>
+			<label for="num">번호</label>
+			<input type="text" name="num" th:value="${dto.num}" readonly/>
+		</div>
+		<div>
+			<label for="num">이름</label>
+			<input type="text" name="name" th:value="${dto.name}"/>
+		</div>
+		<div>
+			<label for="num">주소</label>
+			<input type="text" name="addr" th:value="${dto.addr}"/>
+		</div>
+			<button type="submit">저장</button>
+		</form>
+	</div>
+</body>
+</html>

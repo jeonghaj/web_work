@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div class="container">
+		<a th:href="@{/cook/insertform}">요리 추가</a>
+		<h1>요리 목록 입니다</h1>
+		<table>
+			<thead>
+				<tr>
+					<th>번호</th>
+					<th>요리 이름</th>
+					<th>레시피</th>
+					<th>삭제</th>
+					<th>수정</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="tmp : ${list}">
+					<td th:text="${tmp.num}"></td>
+					<td th:text="${tmp.name}"></td>
+					<td th:text="${tmp.recipe}"></td>
+					<td><a th:href="@{/cook/delete(num=${tmp.num})}">삭제</a></td>
+					<td><a th:href="@{/cook/updateform(num=${tmp.num})}">수정</a></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>
