@@ -5,11 +5,15 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.example.boot12.dto.UserDto;
 import com.example.boot12.util.JwtUtil;
 
 import jakarta.servlet.http.Cookie;
@@ -19,15 +23,37 @@ import jakarta.servlet.http.HttpServletResponse;
 public class JwtTestController {
 	//Jwt 토큰 유틸
 	@Autowired 
-	private JwtUtil jwtUtil;
-	
+	private JwtUtil jwtUtil;	
 	//jwt 를 쿠키로 저장할때 쿠키의 이름
 	@Value("${jwt.name}")
 	private String jwtName;
-	
 	//쿠키 유지시간
 	@Value("${jwt.cookie.expiration}")
 	private int cookieExpiration;
+	
+	// React js 를 테스트 하기 위한 코딩
+	@Autowired AuthenticationManager authManager;
+	
+
+	@ResponseBody
+	@PostMapping("/api/auth")
+	public String auth(@RequestBody UserDto dto ) throws Exception {
+		try {
+			//입력한 username 과 password 를 인증토큰 객체에 담아서 
+			UsernamePasswordAuthenticationToken authToken=
+					new UsernamePasswordAuthenticationToken(dto.getUserName(), dto.getPassword());	
+			//인증 메니저 객체를 이용해서 인증을 진행한다 
+			authManager.authenticate(authToken);
+		}catch(Exception e) {
+			//예외가 발생하면 인증실패(아이디 혹은 비밀번호 틀림 등등...)
+			e.printStackTrace();
+			throw new Exception("아이디 혹은 비밀번호가 틀려요!");
+		}
+		//예외가 발생하지 않고 여기까지 실행 된다면 인증을 통과 한 것이다. 토큰을 발급해서 응답한다.
+		String token=jwtUtil.generateToken(dto.getUserName());
+		
+		return "Bearer+"+token;
+	}
 	
 	@ResponseBody
 	@GetMapping("/api/names") //토큰이 있어야지만 요청이 가능

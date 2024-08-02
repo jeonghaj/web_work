@@ -4,9 +4,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.http.SessionCreationPolicy;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
@@ -35,8 +38,8 @@ public class SecurityConfig {
 			CookieRequestCache cookCache) throws Exception{
 		//화이트 리스트를 미리 배열에 넣어두기
 		String[] whiteList= {"/", "/user/signup_form", "/user/signup", 
-				"/user/loginform", "/user/login_fail", "/user/expired",
-				"/test/login","/api/test/login","/upload/images/**"};
+				"/user/loginform", "/user/login_fail", "/user/expired","/test/login",
+				"/api/test/login", "/upload/images/**", "/api/auth"};
 		
 		//메소드의 매개변수에 HttpSecurity 의 참조값이 전달되는데 해당 객체를 이용해서 설정을 한다음
 		httpSecurity
@@ -106,5 +109,17 @@ public class SecurityConfig {
 	@Bean
 	CookieRequestCache getCookieRequestCache() {
 		return new CookieRequestCache();
+	}
+	
+	//인증 메니저 객체를 bean 으로 만든다. 
+	@Bean
+	AuthenticationManager authenticationManager(HttpSecurity http, 
+			BCryptPasswordEncoder bCryptPasswordEncoder, UserDetailsService userDetailService) throws Exception {
+	    
+		return http.getSharedObject(AuthenticationManagerBuilder.class) 
+	      .userDetailsService(userDetailService)
+	      .passwordEncoder(bCryptPasswordEncoder)
+	      .and()
+	      .build();
 	}
 }
