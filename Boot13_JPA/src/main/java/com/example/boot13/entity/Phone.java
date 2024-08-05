@@ -20,7 +20,6 @@ import lombok.Setter;
 @Getter
 @Setter
 @Builder
-
 @Entity(name="PHONE_INFO") // 테이블명
 public class Phone {
 	// Id 라는 칼럼은 primary key 값으로 설정되도록 하겠다

@@ -37,6 +37,7 @@ public class JwtTestController {
 
 	@ResponseBody
 	@PostMapping("/api/auth")
+	// @RequestBody 폼 전송되는 값이 json 문자열로 넘어올때 그 값을 추출하기 위한 어노테이션
 	public String auth(@RequestBody UserDto dto ) throws Exception {
 		try {
 			//입력한 username 과 password 를 인증토큰 객체에 담아서 

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container mt-5">
+        <nav class="navbar navbar-light bg-light">
+            <a class="navbar-brand" th:href="@{/}">Home</a>
+            <a class="navbar-brand" th:href="@{/emp/list}">List</a>
+        </nav>
+        <h3 class="mt-4">부서 정보 자세히 보기</h3>
+        <dl class="row">
+            <dt class="col-sm-3">부서 번호</dt>
+            <dd class="col-sm-9">[[${dto.getDeptno}]]</dd>
+
+            <dt class="col-sm-3">부서 이름</dt>
+            <dd class="col-sm-9">[[${dto.getDname}]]</dd>
+
+            <dt class="col-sm-3">부서 위치</dt>
+            <dd class="col-sm-9">[[${dto.getLoc}]]</dd>
+
+            <dt class="col-sm-3">부서 인원</dt>
+            <dd class="col-sm-9">[[${dto.getCount}]]</dd>
+
+            <dt class="col-sm-3">부서원 리스트</dt>
+            <dd class="col-sm-9">
+                <ul class="list-group">
+                    <li th:each="tmp : ${dto.getNames}" class="list-group-item">[[${tmp}]]</li>
+                </ul>
+            </dd>
+        </dl>
+    </div>
+</body>
+</html>

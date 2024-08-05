@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div class="container">
+		<a th:href="@{/}">Home</a>
+		<h3>사원 목록</h3>
+			<table>
+				<thead>
+					<tr>
+						<th>사원번호</th>
+						<th>사원이름</th>
+						<th>부서번호</th>
+						<th>부서이름</th>
+						<th>부서위치</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="tmp : ${list}">
+						<td th:text="${tmp.empno}"></td>
+						<td th:text="${tmp.ename}"></td>
+						<td th:text="${tmp.deptno}"></td>
+						<td>
+							<a th:href="@{/emp/dept(deptno=${tmp.deptno})}">[[${tmp.dname}]]</a>
+						</td>
+						<td th:text="${tmp.loc}"></td>
+					</tr>
+				</tbody>
+			</table>
+	</div>
+</body>
+</html>
