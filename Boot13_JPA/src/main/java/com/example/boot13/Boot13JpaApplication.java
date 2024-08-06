@@ -91,7 +91,7 @@ public class Boot13JpaApplication {
 		tx.begin();
 		try {
 			List<String> queries = new ArrayList<>();
-
+			// JPQL
 			queries.add("INSERT INTO DEPT VALUES (10,'ACCOUNTING','NEW YORK');");
 			queries.add("INSERT INTO DEPT VALUES (20,'RESEARCH','DALLAS');");
 			queries.add("INSERT INTO DEPT VALUES (30,'SALES','CHICAGO');");

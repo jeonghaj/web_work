@@ -1,0 +1,27 @@
+# yml 파일은 야믈 파일이라고 읽는다
+# application.properties 파일을 대체한다.
+# 작성형식이 달라서 조금 더 편리하게 작성하고 구조파악을 하기 쉽다.
+
+#들여쓰기 / : 다음 띄어쓰기
+server:
+  port: 8888
+  servlet:
+    session:
+      tracking-modes: cookie
+      
+# DB 접속 정보와 파일 업로드 설정
+spring:
+  datasource:
+    driver-class-name: oracle.jdbc.OracleDriver
+    url: jdbc:oracle:thin:@localhost:1521:xe
+    username: scott
+    password: tiger
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 100MB
+# mybatis 설정
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.example.boot14.**
+        
