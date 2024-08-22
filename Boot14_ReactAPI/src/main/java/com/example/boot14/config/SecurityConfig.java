@@ -16,8 +16,6 @@ import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.security.web.savedrequest.CookieRequestCache;
 
-import com.example.boot12.handler.AuthFailHandler;
-import com.example.boot12.handler.AuthSuccessHandler;
 import com.example.boot14.filter.JwtFilter;
 
 import jakarta.servlet.http.Cookie;
@@ -34,13 +32,19 @@ public class SecurityConfig {
 	@Autowired
 	private JwtFilter jwtFilter;
 	
+	@Bean
+	public CookieRequestCache cookieRequestCache() {
+	    return new CookieRequestCache();
+	}
+	
 	@Bean //메소드에서 리턴되는 SecurityFilterChain 을 bean 으로 만들어준다.
 	public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity,
 			CookieRequestCache cookCache) throws Exception{
 		//화이트 리스트를 미리 배열에 넣어두기
 		String[] whiteList= {"/", "/user/signup_form", "/user/signup", 
 				"/user/loginform", "/user/login_fail", "/user/expired","/test/login",
-				"/api/test/login", "/upload/images/**", "/api/auth"};
+				"/api/test/login", "/upload/images/**", "/auth", "/posts/**", 
+				"/gallery/**", "/members/**",};
 		
 		//메소드의 매개변수에 HttpSecurity 의 참조값이 전달되는데 해당 객체를 이용해서 설정을 한다음
 		httpSecurity
