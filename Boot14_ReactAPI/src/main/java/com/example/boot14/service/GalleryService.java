@@ -11,4 +11,6 @@ public interface GalleryService {
 	public void addToGallery(GalleryDto dto);
 	//갤러리 1개의 정보를 리턴하는 메소드
 	public GalleryDto selectOne(int num);
+	//갤러리 1개의 정보를 삭제하는 메소드
+	public void deleteOne(int num);
 }

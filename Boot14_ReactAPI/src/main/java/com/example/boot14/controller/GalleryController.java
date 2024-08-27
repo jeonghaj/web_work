@@ -5,6 +5,7 @@ import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -42,4 +43,15 @@ public class GalleryController {
 	public GalleryDto detail(@PathVariable("num") int num) {
 		return service.selectOne(num);
 	}
+	
+	@DeleteMapping("/gallery/{num}")
+	public Map<String, Object> delete(@PathVariable("num") int num){
+		service.deleteOne(num);
+		
+		Map<String, Object> map=new HashMap<>();
+		map.put("isSuccess", true);
+		return map;
+	}
+	
+	
 }

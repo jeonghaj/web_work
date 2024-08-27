@@ -4017,3 +4017,525 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY org.springframework.tooling.boot.ls 1 0 2024-08-22 12:01:48.588
 !MESSAGE Boot project ADDED: TestWeb
+!SESSION 2024-08-23 09:36:52.945 -----------------------------------------------
+eclipse.buildId=4.31.0.20240307-1200
+java.version=17.0.11
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.emf.ecore 2 0 2024-08-23 09:36:55.871
+!MESSAGE Both 'org.eclipse.jst.j2ee.core' and 'org.eclipse.jst.j2ee.core' register a package for 'application.xmi'
+
+!ENTRY ch.qos.logback.classic 1 0 2024-08-23 09:36:56.246
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2024-08-23 09:36:59.739
+!MESSAGE Logback config file: C:\Users\user\playground\web_work\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.6.0.20240217-1525.xml
+
+!ENTRY org.eclipse.ui 2 0 2024-08-23 09:37:00.530
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2024-08-23 09:37:00.530
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.eclipse.ui 2 0 2024-08-23 09:37:01.106
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2024-08-23 09:37:01.106
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2024-08-23 09:37:02.239
+!MESSAGE Unable to retrieve the bundle from the URI: bundleclass://com.genuitec.eclipse.meexplorer/com.genuitec.eclipse.meexplorer.breadcrumb.e4.BreadCrumbContainer
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-08-23 09:37:06.081
+!MESSAGE Command list starting LS: org.springframework.tooling.boot.ls
+START:
+C:\Users\user\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.11.v20240426-1830\jre\bin\javaw.exe
+-cp
+C:\Users\user\eclipse\jee-2024-03\eclipse\..\..\..\.p2\pool\plugins\org.springframework.tooling.boot.ls_1.55.1.202406141939\servers\spring-boot-language-server\BOOT-INF\classes;C:\Users\user\eclipse\jee-2024-03\eclipse\..\..\..\.p2\pool\plugins\org.springframework.tooling.boot.ls_1.55.1.202406141939\servers\spring-boot-language-server\BOOT-INF\lib\*
+-Dsts.lsp.client=eclipse
+-Xmx1024m
+-XX:TieredStopAtLevel=1
+-Xlog:jni+resolve=off
+-Dspring.config.location=file:C:\Users\user\eclipse\jee-2024-03\eclipse\..\..\..\.p2\pool\plugins\org.springframework.tooling.boot.ls_1.55.1.202406141939\servers\spring-boot-language-server\BOOT-INF\classes\application.properties
+-XX:ErrorFile=C:/Users/user/playground/web_work/.metadata/.plugins/org.springframework.tooling.boot.ls/fatal-error-spring-boot_1724373426081
+org.springframework.ide.vscode.boot.app.BootLanguageServerBootApp
+--languageserver.hover-timeout=225
+END
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-08-23 09:37:06.082
+!MESSAGE DelegatingStreamConnectionProvider - Starting Boot LS
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-08-23 09:37:06.093
+!MESSAGE Started org.springframework.tooling.boot.ls LS process 10828
+
+!ENTRY org.eclipse.egit.ui 2 0 2024-08-23 09:37:07.024
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\user'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-08-23 09:37:07.131
+!MESSAGE Boot project ADDED: Boot00_Test
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-08-23 09:37:07.132
+!MESSAGE Starting Boot LS...
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-08-23 09:37:07.135
+!MESSAGE Started Boot LS process
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-08-23 09:37:07.137
+!MESSAGE Boot project ADDED: Boot01_Bean
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-08-23 09:37:07.140
+!MESSAGE Boot project ADDED: Boot02_Controller
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-08-23 09:37:07.143
+!MESSAGE Boot project ADDED: Boot03_Jsp
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-08-23 09:37:07.146
+!MESSAGE Boot project ADDED: Boot04_Thymeleaf
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-08-23 09:37:07.150
+!MESSAGE Boot project ADDED: Boot05_MyBatis
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-08-23 09:37:07.153
+!MESSAGE Boot project ADDED: Boot06_interceptor
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-08-23 09:37:07.154
+!MESSAGE Boot project ADDED: Boot07_FileUpload
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-08-23 09:37:07.154
+!MESSAGE Boot project ADDED: Boot08_Security
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-08-23 09:37:07.157
+!MESSAGE Boot project ADDED: Boot09_AOP
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-08-23 09:37:07.161
+!MESSAGE Boot project ADDED: Boot10_Restful_API
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-08-23 09:37:07.165
+!MESSAGE Boot project ADDED: Boot11_Example
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-08-23 09:37:07.166
+!MESSAGE Boot project ADDED: Boot12_JWT
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-08-23 09:37:07.169
+!MESSAGE Boot project ADDED: Boot13_JPA
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-08-23 09:37:07.170
+!MESSAGE Boot project ADDED: Boot14_ReactAPI
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-08-23 09:37:07.444
+!MESSAGE Boot project ADDED: HelloBoot
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-08-23 09:37:07.501
+!MESSAGE Boot project ADDED: TestBoot
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-08-23 09:37:07.502
+!MESSAGE Boot project ADDED: TestWeb
+
+!ENTRY org.eclipse.jface 2 0 2024-08-23 10:02:28.590
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2024-08-23 10:02:28.590
+!MESSAGE A conflict occurred for CTRL+D:
+Binding(CTRL+D,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.text.delete.line,Delete Line,
+		Delete a line of text,
+		Category(org.eclipse.ui.category.textEditor,Text Editing,Text Editing Commands,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.ui.edit.text.delete.line"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+Binding(CTRL+D,
+	ParameterizedCommand(Command(io.emmet.eclipse.commands.match_pair_outward,Match Pair Outward,
+		,
+		Category(io.emmet.eclipse.commands.category,Emmet,null,true),
+		WorkbenchHandlerServiceHandler("io.emmet.eclipse.commands.match_pair_outward"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-08-23 10:11:56.090
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/application-client_9.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-08-23 10:11:56.091
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/jobXML_2_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-08-23 10:11:56.092
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/beans_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-08-23 10:11:56.093
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jaxb/bindingschema_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-08-23 10:11:56.097
+!MESSAGE The given URI https://jakarta.ee/xml/ns/validation/validation-configuration-3.0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-08-23 10:11:56.099
+!MESSAGE The given URI http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_1.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.jface 2 0 2024-08-23 10:11:56.255
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2024-08-23 10:11:56.255
+!MESSAGE A conflict occurred for CTRL+SHIFT+/:
+Binding(CTRL+SHIFT+/,
+	ParameterizedCommand(Command(io.emmet.eclipse.commands.toggle_comment,Toggle Comment,
+		,
+		Category(io.emmet.eclipse.commands.category,Emmet,null,true),
+		WorkbenchHandlerServiceHandler("io.emmet.eclipse.commands.toggle_comment"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+Binding(CTRL+SHIFT+/,
+	ParameterizedCommand(Command(org.eclipse.tm4e.languageconfiguration.addBlockCommentCommand,Add Block Comment,
+		,
+		Category(org.eclipse.tm4e.languageconfiguration.category,TM4E Language Configuration,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.tm4e.languageconfiguration.addBlockCommentCommand"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-08-23 10:14:27.941
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/application-client_9.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-08-23 10:14:27.941
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/jobXML_2_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-08-23 10:14:27.942
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/beans_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-08-23 10:14:27.944
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jaxb/bindingschema_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-08-23 10:14:27.947
+!MESSAGE The given URI https://jakarta.ee/xml/ns/validation/validation-configuration-3.0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-08-23 10:14:27.948
+!MESSAGE The given URI http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_1.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.lsp4e 2 0 2024-08-23 10:40:23.832
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:386)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:65)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+!SESSION 2024-08-26 09:31:43.675 -----------------------------------------------
+eclipse.buildId=4.31.0.20240307-1200
+java.version=17.0.11
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.emf.ecore 2 0 2024-08-26 09:31:47.978
+!MESSAGE Both 'org.eclipse.jst.j2ee.core' and 'org.eclipse.jst.j2ee.core' register a package for 'application.xmi'
+
+!ENTRY ch.qos.logback.classic 1 0 2024-08-26 09:31:48.286
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2024-08-26 09:31:52.510
+!MESSAGE Logback config file: C:\Users\user\playground\web_work\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.6.0.20240217-1525.xml
+
+!ENTRY org.eclipse.ui 2 0 2024-08-26 09:31:53.492
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2024-08-26 09:31:53.492
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.eclipse.ui 2 0 2024-08-26 09:31:54.245
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2024-08-26 09:31:54.245
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2024-08-26 09:31:55.542
+!MESSAGE Unable to retrieve the bundle from the URI: bundleclass://com.genuitec.eclipse.meexplorer/com.genuitec.eclipse.meexplorer.breadcrumb.e4.BreadCrumbContainer
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-08-26 09:31:59.441
+!MESSAGE Command list starting LS: org.springframework.tooling.boot.ls
+START:
+C:\Users\user\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.11.v20240426-1830\jre\bin\javaw.exe
+-cp
+C:\Users\user\eclipse\jee-2024-03\eclipse\..\..\..\.p2\pool\plugins\org.springframework.tooling.boot.ls_1.55.1.202406141939\servers\spring-boot-language-server\BOOT-INF\classes;C:\Users\user\eclipse\jee-2024-03\eclipse\..\..\..\.p2\pool\plugins\org.springframework.tooling.boot.ls_1.55.1.202406141939\servers\spring-boot-language-server\BOOT-INF\lib\*
+-Dsts.lsp.client=eclipse
+-Xmx1024m
+-XX:TieredStopAtLevel=1
+-Xlog:jni+resolve=off
+-Dspring.config.location=file:C:\Users\user\eclipse\jee-2024-03\eclipse\..\..\..\.p2\pool\plugins\org.springframework.tooling.boot.ls_1.55.1.202406141939\servers\spring-boot-language-server\BOOT-INF\classes\application.properties
+-XX:ErrorFile=C:/Users/user/playground/web_work/.metadata/.plugins/org.springframework.tooling.boot.ls/fatal-error-spring-boot_1724632319440
+org.springframework.ide.vscode.boot.app.BootLanguageServerBootApp
+--languageserver.hover-timeout=225
+END
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-08-26 09:31:59.442
+!MESSAGE DelegatingStreamConnectionProvider - Starting Boot LS
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-08-26 09:31:59.455
+!MESSAGE Started org.springframework.tooling.boot.ls LS process 16564
+
+!ENTRY org.eclipse.jface 2 0 2024-08-26 09:32:00.154
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2024-08-26 09:32:00.154
+!MESSAGE A conflict occurred for CTRL+D:
+Binding(CTRL+D,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.text.delete.line,Delete Line,
+		Delete a line of text,
+		Category(org.eclipse.ui.category.textEditor,Text Editing,Text Editing Commands,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.ui.edit.text.delete.line"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+Binding(CTRL+D,
+	ParameterizedCommand(Command(io.emmet.eclipse.commands.match_pair_outward,Match Pair Outward,
+		,
+		Category(io.emmet.eclipse.commands.category,Emmet,null,true),
+		WorkbenchHandlerServiceHandler("io.emmet.eclipse.commands.match_pair_outward"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2024-08-26 09:32:00.809
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\user'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-08-26 09:32:00.928
+!MESSAGE Boot project ADDED: Boot00_Test
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-08-26 09:32:00.929
+!MESSAGE Starting Boot LS...
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-08-26 09:32:00.932
+!MESSAGE Started Boot LS process
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-08-26 09:32:00.936
+!MESSAGE Boot project ADDED: Boot01_Bean
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-08-26 09:32:00.941
+!MESSAGE Boot project ADDED: Boot02_Controller
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-08-26 09:32:00.944
+!MESSAGE Boot project ADDED: Boot03_Jsp
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-08-26 09:32:00.949
+!MESSAGE Boot project ADDED: Boot04_Thymeleaf
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-08-26 09:32:00.957
+!MESSAGE Boot project ADDED: Boot05_MyBatis
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-08-26 09:32:00.961
+!MESSAGE Boot project ADDED: Boot06_interceptor
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-08-26 09:32:00.963
+!MESSAGE Boot project ADDED: Boot07_FileUpload
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-08-26 09:32:00.964
+!MESSAGE Boot project ADDED: Boot08_Security
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-08-26 09:32:00.968
+!MESSAGE Boot project ADDED: Boot09_AOP
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-08-26 09:32:00.987
+!MESSAGE Boot project ADDED: Boot10_Restful_API
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-08-26 09:32:01.000
+!MESSAGE Boot project ADDED: Boot11_Example
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-08-26 09:32:01.002
+!MESSAGE Boot project ADDED: Boot12_JWT
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-08-26 09:32:01.010
+!MESSAGE Boot project ADDED: Boot13_JPA
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-08-26 09:32:01.011
+!MESSAGE Boot project ADDED: Boot14_ReactAPI
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-08-26 09:32:01.304
+!MESSAGE Boot project ADDED: HelloBoot
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-08-26 09:32:01.345
+!MESSAGE Boot project ADDED: TestBoot
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-08-26 09:32:01.346
+!MESSAGE Boot project ADDED: TestWeb
+!SESSION 2024-08-27 09:37:28.759 -----------------------------------------------
+eclipse.buildId=4.31.0.20240307-1200
+java.version=17.0.11
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.emf.ecore 2 0 2024-08-27 09:37:31.514
+!MESSAGE Both 'org.eclipse.jst.j2ee.core' and 'org.eclipse.jst.j2ee.core' register a package for 'application.xmi'
+
+!ENTRY ch.qos.logback.classic 1 0 2024-08-27 09:37:31.898
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2024-08-27 09:37:51.669
+!MESSAGE Logback config file: C:\Users\user\playground\web_work\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.6.0.20240217-1525.xml
+
+!ENTRY org.eclipse.ui 2 0 2024-08-27 09:37:52.379
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2024-08-27 09:37:52.379
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.eclipse.ui 2 0 2024-08-27 09:37:52.827
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2024-08-27 09:37:52.827
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2024-08-27 09:37:53.909
+!MESSAGE Unable to retrieve the bundle from the URI: bundleclass://com.genuitec.eclipse.meexplorer/com.genuitec.eclipse.meexplorer.breadcrumb.e4.BreadCrumbContainer
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-08-27 09:37:57.679
+!MESSAGE Command list starting LS: org.springframework.tooling.boot.ls
+START:
+C:\Users\user\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.11.v20240426-1830\jre\bin\javaw.exe
+-cp
+C:\Users\user\eclipse\jee-2024-03\eclipse\..\..\..\.p2\pool\plugins\org.springframework.tooling.boot.ls_1.55.1.202406141939\servers\spring-boot-language-server\BOOT-INF\classes;C:\Users\user\eclipse\jee-2024-03\eclipse\..\..\..\.p2\pool\plugins\org.springframework.tooling.boot.ls_1.55.1.202406141939\servers\spring-boot-language-server\BOOT-INF\lib\*
+-Dsts.lsp.client=eclipse
+-Xmx1024m
+-XX:TieredStopAtLevel=1
+-Xlog:jni+resolve=off
+-Dspring.config.location=file:C:\Users\user\eclipse\jee-2024-03\eclipse\..\..\..\.p2\pool\plugins\org.springframework.tooling.boot.ls_1.55.1.202406141939\servers\spring-boot-language-server\BOOT-INF\classes\application.properties
+-XX:ErrorFile=C:/Users/user/playground/web_work/.metadata/.plugins/org.springframework.tooling.boot.ls/fatal-error-spring-boot_1724719077679
+org.springframework.ide.vscode.boot.app.BootLanguageServerBootApp
+--languageserver.hover-timeout=225
+END
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-08-27 09:37:57.680
+!MESSAGE DelegatingStreamConnectionProvider - Starting Boot LS
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-08-27 09:37:57.693
+!MESSAGE Started org.springframework.tooling.boot.ls LS process 11308
+
+!ENTRY org.eclipse.jface 2 0 2024-08-27 09:37:58.298
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2024-08-27 09:37:58.298
+!MESSAGE A conflict occurred for CTRL+D:
+Binding(CTRL+D,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.text.delete.line,Delete Line,
+		Delete a line of text,
+		Category(org.eclipse.ui.category.textEditor,Text Editing,Text Editing Commands,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.ui.edit.text.delete.line"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+Binding(CTRL+D,
+	ParameterizedCommand(Command(io.emmet.eclipse.commands.match_pair_outward,Match Pair Outward,
+		,
+		Category(io.emmet.eclipse.commands.category,Emmet,null,true),
+		WorkbenchHandlerServiceHandler("io.emmet.eclipse.commands.match_pair_outward"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.textEditorScope,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2024-08-27 09:37:58.974
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\user'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-08-27 09:37:59.138
+!MESSAGE Boot project ADDED: Boot00_Test
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-08-27 09:37:59.139
+!MESSAGE Starting Boot LS...
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-08-27 09:37:59.143
+!MESSAGE Started Boot LS process
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-08-27 09:37:59.147
+!MESSAGE Boot project ADDED: Boot01_Bean
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-08-27 09:37:59.151
+!MESSAGE Boot project ADDED: Boot02_Controller
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-08-27 09:37:59.155
+!MESSAGE Boot project ADDED: Boot03_Jsp
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-08-27 09:37:59.171
+!MESSAGE Boot project ADDED: Boot04_Thymeleaf
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-08-27 09:37:59.174
+!MESSAGE Boot project ADDED: Boot05_MyBatis
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-08-27 09:37:59.178
+!MESSAGE Boot project ADDED: Boot06_interceptor
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-08-27 09:37:59.179
+!MESSAGE Boot project ADDED: Boot07_FileUpload
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-08-27 09:37:59.180
+!MESSAGE Boot project ADDED: Boot08_Security
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-08-27 09:37:59.183
+!MESSAGE Boot project ADDED: Boot09_AOP
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-08-27 09:37:59.186
+!MESSAGE Boot project ADDED: Boot10_Restful_API
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-08-27 09:37:59.189
+!MESSAGE Boot project ADDED: Boot11_Example
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-08-27 09:37:59.189
+!MESSAGE Boot project ADDED: Boot12_JWT
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-08-27 09:37:59.193
+!MESSAGE Boot project ADDED: Boot13_JPA
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-08-27 09:37:59.194
+!MESSAGE Boot project ADDED: Boot14_ReactAPI
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-08-27 09:37:59.514
+!MESSAGE Boot project ADDED: HelloBoot
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-08-27 09:37:59.546
+!MESSAGE Boot project ADDED: TestBoot
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-08-27 09:37:59.547
+!MESSAGE Boot project ADDED: TestWeb
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-08-27 10:03:42.458
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/application-client_9.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-08-27 10:03:42.459
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/jobXML_2_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-08-27 10:03:42.459
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/beans_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-08-27 10:03:42.459
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jaxb/bindingschema_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-08-27 10:03:42.462
+!MESSAGE The given URI https://jakarta.ee/xml/ns/validation/validation-configuration-3.0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-08-27 10:03:42.463
+!MESSAGE The given URI http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_1.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-08-27 10:06:25.776
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/application-client_9.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-08-27 10:06:25.777
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/jobXML_2_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-08-27 10:06:25.777
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/beans_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-08-27 10:06:25.778
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jaxb/bindingschema_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-08-27 10:06:25.780
+!MESSAGE The given URI https://jakarta.ee/xml/ns/validation/validation-configuration-3.0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-08-27 10:06:25.781
+!MESSAGE The given URI http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_1.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
